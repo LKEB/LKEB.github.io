@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>LKEB</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">LKEB</h1>
+</header>
+<h1 class="unnumbered" id="bibliography">Publications 2024</h1>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0"
+role="list">
+<div id="ref-devosMachineLearningImage2024" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">B.
+D. de Vos, H. Sokooti, M. Staring, and I. Išgum, <span>“Machine learning
+in image registration,”</span> in <em>Medical <span>Image</span>
+<span>Analysis</span></em>, A. F. Frangi, J. L. Prince, and M. Sonka,
+Eds., in The <span>MICCAI</span> <span>Society</span> book
+<span>Series</span>., Academic Press, 2024, pp. 501–515. doi: <a
+href="https://doi.org/10.1016/B978-0-12-813657-7.00031-5">10.1016/B978-0-12-813657-7.00031-5</a>.</div>
+</div>
+<div id="ref-hassanzadehDeepLearningbasedComparative2024"
+class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">T.
+Hassanzadeh <em>et al.</em>, <span>“A deep learning-based comparative
+<span>MRI</span> model to detect inflammatory changes in rheumatoid
+arthritis,”</span> <em>Biomedical Signal Processing and Control</em>,
+vol. 88, p. 105612, Feb. 2024, doi: <a
+href="https://doi.org/10.1016/j.bspc.2023.105612">10.1016/j.bspc.2023.105612</a>.</div>
+</div>
+<div id="ref-chaves-de-plazaInclusionDepthContour2024" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">N.
+F. Chaves-de-Plaza, P. Mody, M. Staring, R. van Egmond, A. Vilanova, and
+K. Hildebrandt, <span>“Inclusion <span>Depth</span> for
+<span>Contour</span> <span>Ensembles</span>,”</span> <em>IEEE
+Transactions on Visualization and Computer Graphics</em>, pp. 1–12, Jan.
+2024, doi: <a
+href="https://doi.org/10.1109/TVCG.2024.3350076">10.1109/TVCG.2024.3350076</a>.</div>
+</div>
+<div id="ref-beljaardsAIbasedMotionArtifact2024" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">L.
+Beljaards, N. Pezzotti, C. Rao, M. Doneva, M. J. P. van Osch, and M.
+Staring, <span>“<span>AI</span>-based motion artifact severity
+estimation in undersampled <span>MRI</span> allowing for selection of
+appropriate reconstruction models,”</span> <em>Med Phys</em>, Jan. 2024,
+doi: <a
+href="https://doi.org/10.1002/mp.16918">10.1002/mp.16918</a>.</div>
+</div>
+<div id="ref-sunDeepLearningBased2024" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">X.
+Sun, L.-H. Cheng, S. Plein, P. Garg, and R. J. van der Geest,
+<span>“Deep learning based automated left ventricle segmentation and
+flow quantification in <span>4D</span> flow cardiac
+<span>MRI</span>,”</span> <em>Journal of Cardiovascular Magnetic
+Resonance</em>, p. 100003, Jan. 2024, doi: <a
+href="https://doi.org/10.1016/j.jocmr.2023.100003">10.1016/j.jocmr.2023.100003</a>.</div>
+</div>
+<div id="ref-zhouEditorialAdvancedQuantitative2024" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">X.
+Zhou, Y. CHEN, R. Van Der Geest, P. Hu, and M.-Y. Ng, <span>“Editorial:
+<span>Advanced</span> <span>Quantitative</span> <span>Indexes</span> in
+<span>Cardiovascular</span> <span>Magnetic</span> <span>Resonance</span>
+<span>Imaging</span>,”</span> <em>Frontiers in Cardiovascular
+Medicine</em>, vol. 11, 2024, Accessed: Jan. 25, 2024. [Online].
+Available: <a
+href="https://www.frontiersin.org/articles/10.3389/fcvm.2024.1302397">https://www.frontiersin.org/articles/10.3389/fcvm.2024.1302397</a></div>
+</div>
+<div id="ref-dijkhuisSemiautomaticStandardizedAnalysis2024"
+class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">T.
+H. Dijkhuis <em>et al.</em>, <span>“Semi-automatic standardized analysis
+method to objectively evaluate near-infrared fluorescent dyes in
+image-guided surgery,”</span> <em>J Biomed Opt</em>, vol. 29, no. 2, p.
+026001, Feb. 2024, doi: <a
+href="https://doi.org/10.1117/1.JBO.29.2.026001">10.1117/1.JBO.29.2.026001</a>.</div>
+</div>
+<div id="ref-rooijakkersAssessmentParavalvularRegurgitation2024"
+class="csl-entry" role="listitem">
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">M.
+J. P. Rooijakkers <em>et al.</em>, <span>“Assessment of paravalvular
+regurgitation after transcatheter aortic valve replacement using
+<span>2D</span> multi-venc and <span>4D</span> flow
+<span>CMR</span>,”</span> <em>Eur Heart J Cardiovasc Imaging</em>, p.
+jeae035, Feb. 2024, doi: <a
+href="https://doi.org/10.1093/ehjci/jeae035">10.1093/ehjci/jeae035</a>.</div>
+</div>
+<div id="ref-stoelDeepLearningRheumatological2024" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline">B.
+C. Stoel, M. Staring, M. Reijnierse, and A. H. M. van der Helm-van Mil,
+<span>“Deep learning in rheumatological image interpretation,”</span>
+<em>Nat Rev Rheumatol</em>, pp. 1–14, Feb. 2024, doi: <a
+href="https://doi.org/10.1038/s41584-023-01074-5">10.1038/s41584-023-01074-5</a>.</div>
+</div>
+<div id="ref-zhangCrosssectionalAnglePrediction2024" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[10] </div><div class="csl-right-inline">X.
+Zhang <em>et al.</em>, <span>“Cross-sectional angle prediction of
+lipid-rich and calcified tissue on computed tomography angiography
+images,”</span> <em>Int J CARS</em>, Mar. 2024, doi: <a
+href="https://doi.org/10.1007/s11548-024-03086-2">10.1007/s11548-024-03086-2</a>.</div>
+</div>
+<div id="ref-parasaEvaluationPerformanceDeep2024" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[11] </div><div class="csl-right-inline">R.
+Parasa <em>et al.</em>, <span>“Evaluation of the performance of deep
+learning-based methods in assessing plaque pathology in standalone
+optical and hybrid optical-based imaging,”</span> in <em>Diagnostic and
+<span>Therapeutic</span> <span>Applications</span> of <span>Light</span>
+in <span>Cardiology</span> 2024</em>, SPIE, Mar. 2024, p. 1281902. doi:
+<a
+href="https://doi.org/10.1117/12.3000554">10.1117/12.3000554</a>.</div>
+</div>
+<div id="ref-bajajAccuracyUniformVs2024" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[12] </div><div class="csl-right-inline">R.
+Bajaj <em>et al.</em>, <span>“Accuracy of uniform vs non-uniform
+shrinkage of intravascular imaging-based coronary plaque models for
+plaque structural stress estimations: Validation against
+histology,”</span> in <em>Diagnostic and <span>Therapeutic</span>
+<span>Applications</span> of <span>Light</span> in
+<span>Cardiology</span> 2024</em>, SPIE, Mar. 2024, p. 1281905. doi: <a
+href="https://doi.org/10.1117/12.3007278">10.1117/12.3007278</a>.</div>
+</div>
+<div id="ref-poonTwoFacetsShear2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[13] </div><div class="csl-right-inline">E.
+K. W. Poon <em>et al.</em>, <span>“Two <span>Facets</span> of
+<span>Shear</span> <span>Stress</span> <span>Post</span>
+<span>Drug</span> <span>Coating</span> <span>Balloon</span>:
+<span>Angiography</span> <span>Versus</span> <span>Optical</span>
+<span>Coherence</span> <span>Tomography</span> <span>Fusion</span>
+<span>Approach</span>,”</span> <em>Circ: Cardiovascular Imaging</em>, p.
+e016279, Mar. 2024, doi: <a
+href="https://doi.org/10.1161/CIRCIMAGING.123.016279">10.1161/CIRCIMAGING.123.016279</a>.</div>
+</div>
+<div id="ref-heEfficacyCoronaryCalcium2024" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[14] </div><div class="csl-right-inline">X.
+He <em>et al.</em>, <span>“Efficacy of <span>Coronary</span>
+<span>Calcium</span> <span>Score</span> in <span>Predicting</span>
+<span>Coronary</span> <span>Artery</span> <span>Morphology</span> in
+<span>Patients</span> <span>With</span> <span>Obstructive</span>
+<span>Coronary</span> <span>Artery</span> <span>Disease</span>,”</span>
+<em>Journal of the Society for Cardiovascular Angiography &amp;
+Interventions</em>, vol. 3, no. 3, Part B, p. 101308, Mar. 2024, doi: <a
+href="https://doi.org/10.1016/j.jscai.2024.101308">10.1016/j.jscai.2024.101308</a>.</div>
+</div>
+<div id="ref-assadiValidationLeftAtrial2024" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[15] </div><div class="csl-right-inline">H.
+Assadi <em>et al.</em>, <span>“Validation of <span>Left</span>
+<span>Atrial</span> <span>Volume</span> <span>Correction</span> for
+<span>Single</span> <span>Plane</span> <span>Method</span> on
+<span>Four</span>-<span>Chamber</span> <span>Cine</span>
+<span>Cardiac</span> <span>MRI</span>,”</span> <em>Tomography</em>, vol.
+10, no. 4, pp. 459–470, Apr. 2024, doi: <a
+href="https://doi.org/10.3390/tomography10040035">10.3390/tomography10040035</a>.</div>
+</div>
+<div id="ref-simonAssociationLeftAtrial2024" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[16] </div><div class="csl-right-inline">J.
+Simon <em>et al.</em>, <span>“Association of <span>Left</span>
+<span>Atrial</span> <span>Appendage</span> <span>Morphology</span> and
+<span>Function</span> <span>With</span> <span>Stroke</span> and
+<span>Transient</span> <span>Ischemic</span> <span>Attack</span> in
+<span>Atrial</span> <span>Fibrillation</span>
+<span>Patients</span>,”</span> <em>American Journal of Cardiology</em>,
+vol. 0, no. 0, Mar. 2024, doi: <a
+href="https://doi.org/10.1016/j.amjcard.2024.03.025">10.1016/j.amjcard.2024.03.025</a>.</div>
+</div>
+<div id="ref-volinsky-fremondPredictionRecurrenceRisk2024"
+class="csl-entry" role="listitem">
+<div class="csl-left-margin">[17] </div><div class="csl-right-inline">S.
+Volinsky-Fremond <em>et al.</em>, <span>“Prediction of recurrence risk
+in endometrial cancer with multimodal deep learning,”</span> <em>Nat
+Med</em>, pp. 1–12, May 2024, doi: <a
+href="https://doi.org/10.1038/s41591-024-02993-w">10.1038/s41591-024-02993-w</a>.</div>
+</div>
+<div id="ref-omaraVolumeweightedUnipolarVoltage2024" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[18] </div><div class="csl-right-inline">S.
+Omara, Y. Kimura, A. P. Wijnmaalen, R. Van Der Geest, and K. Zeppenfeld,
+<span>“Volume-weighted unipolar voltage identifies diffuse fibrosis in
+patients with non-ischemic cardiomyopathy,”</span> <em>EP Europace</em>,
+vol. 26, no. Supplement_1, p. euae102.695, May 2024, doi: <a
+href="https://doi.org/10.1093/europace/euae102.695">10.1093/europace/euae102.695</a>.</div>
+</div>
+<div id="ref-chaves-de-plazaDepthMultiModalContour2024"
+class="csl-entry" role="listitem">
+<div class="csl-left-margin">[19] </div><div class="csl-right-inline">N.
+F. Chaves-de-Plaza <em>et al.</em>, <span>“Depth for
+<span>Multi</span>-<span>Modal</span> <span>Contour</span>
+<span>Ensembles</span>,”</span> 2024, Accessed: May 28, 2024. [Online].
+Available: <a
+href="https://doi.org/10.1111/cgf.15083">https://doi.org/10.1111/cgf.15083</a></div>
+</div>
+<div id="ref-elmathariFirstUseNew2024" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[20] </div><div class="csl-right-inline">S.
+el Mathari <em>et al.</em>, <span>“First use of a new extended reality
+tool for preoperative planning in coronary artery bypass surgery: A
+case-report,”</span> <em>Journal of Surgical Case Reports</em>, vol.
+2024, no. 6, p. rjae383, Jun. 2024, doi: <a
+href="https://doi.org/10.1093/jscr/rjae383">10.1093/jscr/rjae383</a>.</div>
+</div>
+<div id="ref-niesSignalIntensityVolume2024" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[21] </div><div class="csl-right-inline">K.
+P. H. Nies <em>et al.</em>, <span>“Signal intensity and volume of
+carotid intraplaque hemorrhage on <span>MRI</span> and the risk of
+ipsilateral cerebrovascular events: The <span>Plaque</span>
+<span>At</span> <span>RISK</span> (<span>PARISK</span>) study,”</span>
+<em>Journal of Cardiovascular Magnetic Resonance</em>, vol. 0, no. 0,
+Jun. 2024, doi: <a
+href="https://doi.org/10.1016/j.jocmr.2024.101049">10.1016/j.jocmr.2024.101049</a>.</div>
+</div>
+<div id="ref-zhangDetectabilityIntracranialVessel2024" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[22] </div><div class="csl-right-inline">F.
+Zhang <em>et al.</em>, <span>“Detectability of intracranial vessel wall
+atherosclerosis using black-blood spectral <span>CT</span>: A phantom
+and clinical study,”</span> <em>Eur Radiol Exp</em>, vol. 8, no. 1, p.
+78, Jul. 2024, doi: <a
+href="https://doi.org/10.1186/s41747-024-00473-x">10.1186/s41747-024-00473-x</a>.</div>
+</div>
+<div id="ref-vandriestComparisonLeftVentricular2024" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[23] </div><div class="csl-right-inline">F.
+Y. van Driest <em>et al.</em>, <span>“Comparison of left ventricular
+mass and wall thickness between cardiac computed tomography angiography
+and cardiac magnetic resonance imaging using machine learning
+algorithms,”</span> <em>European Heart Journal - Imaging Methods and
+Practice</em>, p. qyae069, Jul. 2024, doi: <a
+href="https://doi.org/10.1093/ehjimp/qyae069">10.1093/ehjimp/qyae069</a>.</div>
+</div>
+<div id="ref-assadiDevelopmentValidationAIderived2024" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[24] </div><div class="csl-right-inline">H.
+Assadi <em>et al.</em>, <span>“Development and validation of
+<span>AI</span>-derived segmentation of four-chamber cine cardiac
+magnetic resonance,”</span> <em>European Radiology Experimental</em>,
+vol. 8, no. 1, p. 77, Jul. 2024, doi: <a
+href="https://doi.org/10.1186/s41747-024-00477-7">10.1186/s41747-024-00477-7</a>.</div>
+</div>
+<div id="ref-yapImplicationsCoronaryCalcification2024" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[25] </div><div class="csl-right-inline">N.
+A. L. Yap <em>et al.</em>, <span>“Implications of coronary calcification
+on the assessment of plaque pathology: A comparison of computed
+tomography and multimodality intravascular imaging,”</span> <em>Eur
+Radiol</em>, Aug. 2024, doi: <a
+href="https://doi.org/10.1007/s00330-024-10996-x">10.1007/s00330-024-10996-x</a>.</div>
+</div>
+<div id="ref-kanzakiImpactMultipleBallooning2024" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[26] </div><div class="csl-right-inline">Y.
+Kanzaki <em>et al.</em>, <span>“Impact of multiple ballooning on
+coronary lesions as assessed by optical coherence tomography and
+intravascular ultrasound,”</span> <em>Cathet Cardio Intervent</em>, p.
+ccd.31239, Sep. 2024, doi: <a
+href="https://doi.org/10.1002/ccd.31239">10.1002/ccd.31239</a>.</div>
+</div>
+<div id="ref-weiDatadrivenRespiratoryMotion2024" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[27] </div><div class="csl-right-inline">H.
+Wei <em>et al.</em>, <span>“Data-driven respiratory motion correction of
+dual-gated cardiac <span>PET</span>/<span>CT</span> for coronary plaque
+imaging,”</span> in <em>2024 <span>IEEE</span> <span>Nuclear</span>
+<span>Science</span> <span>Symposium</span> (<span>NSS</span>),
+<span>Medical</span> <span>Imaging</span> <span>Conference</span>
+(<span>MIC</span>) and <span>Room</span> <span>Temperature</span>
+<span>Semiconductor</span> <span>Detector</span> <span>Conference</span>
+(<span>RTSD</span>)</em>, Tampa, FL, USA: IEEE, Oct. 2024, pp. 1–1. doi:
+<a
+href="https://doi.org/10.1109/NSS/MIC/RTSD57108.2024.10656463">10.1109/NSS/MIC/RTSD57108.2024.10656463</a>.</div>
+</div>
+<div id="ref-jiaUsing3DPoint2024" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[28] </div><div class="csl-right-inline">J.
+Jia <em>et al.</em>, <span>“Using <span>3D</span> point cloud and
+graph-based neural networks to improve the estimation of pulmonary
+function tests from chest <span>CT</span>,”</span> <em>Computers in
+Biology and Medicine</em>, vol. 182, p. 109192, Nov. 2024, doi: <a
+href="https://doi.org/10.1016/j.compbiomed.2024.109192">10.1016/j.compbiomed.2024.109192</a>.</div>
+</div>
+</div>
+</body>
+</html>

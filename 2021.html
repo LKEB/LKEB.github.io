@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>LKEB</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">LKEB</h1>
+</header>
+<h1 class="unnumbered" id="bibliography">Publications 2021</h1>
+<div id="refs" class="references csl-bib-body" data-entry-spacing="0"
+role="list">
+<div id="ref-hassan_automatic_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">M.
+K. Hassan <em>et al.</em>, <span>“An automatic framework to create
+patient-specific eye models from <span>3D</span> <span>MR</span>-images
+for treatment selection in patients with uveal melanoma,”</span>
+<em>Advances in Radiation Oncology</em>, p. 100697, Apr. 2021, doi: <a
+href="https://doi.org/10.1016/j.adro.2021.100697">10.1016/j.adro.2021.100697</a>.</div>
+</div>
+<div id="ref-mills_feasibility_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">M.
+T. Mills <em>et al.</em>, <span>“Feasibility and validation of
+trans-valvular flow derived by four-dimensional flow cardiovascular
+magnetic resonance imaging in patients with atrial fibrillation,”</span>
+<em>Wellcome Open Res</em>, vol. 6, p. 73, Mar. 2021, doi: <a
+href="https://doi.org/10.12688/wellcomeopenres.16655.1">10.12688/wellcomeopenres.16655.1</a>.</div>
+</div>
+<div id="ref-keo_cingulate_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">A.
+Keo <em>et al.</em>, <span>“Cingulate networks associated with gray
+matter loss in <span>Parkinson</span>’s disease show high expression of
+cholinergic genes in the healthy brain,”</span> <em>European Journal of
+Neuroscience</em>, p. ejn.15216, Apr. 2021, doi: <a
+href="https://doi.org/10.1111/ejn.15216">10.1111/ejn.15216</a>.</div>
+</div>
+<div id="ref-meiszterics_evaluation_2021" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">Z.
+Meiszterics, T. Simor, R. J. van der Geest, N. Farkas, and B. Gaszner,
+<span>“Evaluation of pulse wave velocity for predicting major adverse
+cardiovascular events in post-infarcted patients; comparison of
+oscillometric and <span>MRI</span> methods,”</span> <em>Rev Cardiovasc
+Med</em>, vol. 22, no. 4, pp. 1701–1710, Dec. 2021, doi: <a
+href="https://doi.org/10.31083/j.rcm2204178">10.31083/j.rcm2204178</a>.</div>
+</div>
+<div id="ref-mutluer_evaluation_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">F.
+O. Mutluer <em>et al.</em>, <span>“Evaluation of intraventricular flow
+by multimodality imaging: A review and meta-analysis,”</span>
+<em>Cardiovasc Ultrasound</em>, vol. 19, no. 1, p. 38, Dec. 2021, doi:
+<a
+href="https://doi.org/10.1186/s12947-021-00269-8">10.1186/s12947-021-00269-8</a>.</div>
+</div>
+<div id="ref-benarzi_longitudinal_2021" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">H.
+Ben‐Arzi, A. Das, C. Kelly, R. J. Geest, S. Plein, and E.
+Dall’Armellina, <span>“Longitudinal <span>Changes</span> in
+<span>Left</span> <span>Ventricular</span> <span>Blood</span>
+<span>Flow</span> <span>Kinetic</span> <span>Energy</span>
+<span>After</span> <span>Myocardial</span> <span>Infarction</span>:
+<span>Predictive</span> <span>Relevance</span> for <span>Cardiac</span>
+<span>Remodeling</span>,”</span> <em>J Magn Reson Imaging</em>, p.
+jmri.28015, Dec. 2021, doi: <a
+href="https://doi.org/10.1002/jmri.28015">10.1002/jmri.28015</a>.</div>
+</div>
+<div id="ref-arts_noninvasive_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">T.
+Arts <em>et al.</em>, <span>“Non‐<span>Invasive</span>
+<span>Assessment</span> of <span>Damping</span> of <span>Blood</span>
+<span>Flow</span> <span>Velocity</span> <span>Pulsatility</span> in
+<span>Cerebral</span> <span>Arteries</span> <span>With</span>
+<span>MRI</span>,”</span> <em>J Magn Reson Imaging</em>, p. jmri.27989,
+Nov. 2021, doi: <a
+href="https://doi.org/10.1002/jmri.27989">10.1002/jmri.27989</a>.</div>
+</div>
+<div id="ref-koolstra_stochastic_2021" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">K.
+Koolstra, P. Börnert, B. P. F. Lelieveldt, A. Webb, and O. Dzyubachyk,
+<span>“Stochastic neighbor embedding as a tool for visualizing the
+encoding capability of magnetic resonance fingerprinting
+dictionaries,”</span> <em>Magn Reson Mater Phy</em>, Oct. 2021, doi: <a
+href="https://doi.org/10.1007/s10334-021-00963-8">10.1007/s10334-021-00963-8</a>.</div>
+</div>
+<div id="ref-meiszterics_evaluation_2021-1" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline">Z.
+Meiszterics, T. Simor, R. J. Van Der Geest, N. Farkas, and B. Gaszner,
+<span>“Evaluation of pulse wave velocity for predicting major advanced
+cardiovascular events in patients with chronic myocardial
+infarction,”</span> <em>European Heart Journal</em>, vol. 42, no.
+Supplement_1, p. ehab724.2533, Oct. 2021, doi: <a
+href="https://doi.org/10.1093/eurheartj/ehab724.2533">10.1093/eurheartj/ehab724.2533</a>.</div>
+</div>
+<div id="ref-keo_transcriptomic_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[10] </div><div class="csl-right-inline">A.
+Keo, O. Dzyubachyk, J. van der Grond, J. J. van Hilten, M. J. T.
+Reinders, and A. Mahfouz, <span>“Transcriptomic <span>Signatures</span>
+<span>Associated</span> <span>With</span> <span>Regional</span>
+<span>Cortical</span> <span>Thickness</span> <span>Changes</span> in
+<span>Parkinson</span>’s <span>Disease</span>,”</span> <em>Frontiers in
+Neuroscience</em>, vol. 15, p. 1286, 2021, doi: <a
+href="https://doi.org/10.3389/fnins.2021.733501">10.3389/fnins.2021.733501</a>.</div>
+</div>
+<div id="ref-demirkiran_left_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[11] </div><div class="csl-right-inline">A.
+Demirkiran <em>et al.</em>, <span>“Left ventricular blood flow
+energetics after acute <span>ST</span>-segment elevation myocardial
+infarction associate with left ventricular remodeling,”</span>
+<em>European Heart Journal</em>, vol. 42, no. Supplement_1, p.
+ehab724.0249, Oct. 2021, doi: <a
+href="https://doi.org/10.1093/eurheartj/ehab724.0249">10.1093/eurheartj/ehab724.0249</a>.</div>
+</div>
+<div id="ref-demirkiran_left_2021-1" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[12] </div><div class="csl-right-inline">A.
+Demirkiran <em>et al.</em>, <span>“Left ventricular four-dimensional
+blood flow energetics and vorticity in chronic myocardial infarction
+patients with/without left ventricular thrombus,”</span> <em>European
+Heart Journal - Cardiovascular Imaging</em>, vol. 22, no. Supplement_2,
+Jun. 2021, doi: <a
+href="https://doi.org/10.1093/ehjci/jeab090.091">10.1093/ehjci/jeab090.091</a>.</div>
+</div>
+<div id="ref-grafton-clarke_reproducibility_2021" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[13] </div><div class="csl-right-inline">C.
+Grafton-Clarke <em>et al.</em>, <span>“Reproducibility of left
+ventricular blood flow kinetic energy measured by four-dimensional flow
+<span>CMR</span>,”</span> <em>BMC Res Notes</em>, vol. 14, no. 1, p.
+289, Jul. 2021, doi: <a
+href="https://doi.org/10.1186/s13104-021-05697-3">10.1186/s13104-021-05697-3</a>.</div>
+</div>
+<div id="ref-haq_evaluation_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[14] </div><div class="csl-right-inline">P.
+M. Johnson <em>et al.</em>, <span>“Evaluation of the
+<span>Robustness</span> of <span>Learned</span> <span>MR</span>
+<span>Image</span> <span>Reconstruction</span> to
+<span>Systematic</span> <span>Deviations</span> <span>Between</span>
+<span>Training</span> and <span>Test</span> <span>Data</span> for the
+<span>Models</span> from the <span class="nocase">fastMRI</span>
+<span>Challenge</span>,”</span> in <em>Machine <span>Learning</span> for
+<span>Medical</span> <span>Image</span>
+<span>Reconstruction</span></em>, vol. 12964, N. Haq, P. Johnson, A.
+Maier, T. Würfl, and J. Yoo, Eds., Cham: Springer International
+Publishing, 2021, pp. 25–34. doi: <a
+href="https://doi.org/10.1007/978-3-030-88552-6_3">10.1007/978-3-030-88552-6_3</a>.</div>
+</div>
+<div id="ref-bakken_comparative_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[15] </div><div class="csl-right-inline">T.
+E. Bakken <em>et al.</em>, <span>“Comparative cellular analysis of motor
+cortex in human, marmoset and mouse,”</span> <em>Nature</em>, vol. 598,
+no. 7879, pp. 111–119, Oct. 2021, doi: <a
+href="https://doi.org/10.1038/s41586-021-03465-8">10.1038/s41586-021-03465-8</a>.</div>
+</div>
+<div id="ref-grafton-clarke_mitral_2021" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[16] </div><div class="csl-right-inline">C.
+Grafton-Clarke <em>et al.</em>, <span>“Mitral regurgitation
+quantification by cardiac magnetic resonance imaging (<span>MRI</span>)
+remains reproducible between software solutions,”</span> Wellcome Open
+Research, 6:253, Oct. 2021. doi: <a
+href="https://doi.org/10.12688/wellcomeopenres.17200.1">10.12688/wellcomeopenres.17200.1</a>.</div>
+</div>
+<div id="ref-dzyubachyk_intensity_2021" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[17] </div><div class="csl-right-inline">O.
+Dzyubachyk, R. I. Koning, A. A. Mulder, M. C. Avramut, F. G. Faas, and
+A. J. Koster, <span>“Intensity <span>Correction</span> and
+<span>Standardization</span> for <span>Electron</span>
+<span>Microscopy</span> <span>Data</span>,”</span> in <em>Medical
+<span>Imaging</span> with <span>Deep</span> <span>Learning</span></em>,
+PMLR, Aug. 2021, pp. 148–157. Accessed: Sep. 13, 2021. [Online].
+Available: <a
+href="https://proceedings.mlr.press/v143/dzyubachyk21a.html">https://proceedings.mlr.press/v143/dzyubachyk21a.html</a></div>
+</div>
+<div id="ref-alabed_fully_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[18] </div><div class="csl-right-inline">S.
+Alabed <em>et al.</em>, <span>“Fully automated <span>CMR</span> derived
+stroke volume correlates with right heart catheter measurements in
+patients with suspected pulmonary hypertension,”</span> <em>European
+Heart Journal - Cardiovascular Imaging</em>, vol. 22, no. Supplement_2,
+p. jeab090.036, Jul. 2021, doi: <a
+href="https://doi.org/10.1093/ehjci/jeab090.036">10.1093/ehjci/jeab090.036</a>.</div>
+</div>
+<div id="ref-alabed_high_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[19] </div><div class="csl-right-inline">S.
+Alabed <em>et al.</em>, <span>“High interstudy repeatability of
+automatic deep learnt biventricular <span>CMR</span>
+measurements,”</span> <em>European Heart Journal - Cardiovascular
+Imaging</em>, vol. 22, no. Supplement_2, p. jeab090.035, Jul. 2021, doi:
+<a
+href="https://doi.org/10.1093/ehjci/jeab090.035">10.1093/ehjci/jeab090.035</a>.</div>
+</div>
+<div id="ref-ijsselsteijn_semiautomated_2021" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[20] </div><div class="csl-right-inline">M.
+E. Ijsselsteijn, A. Somarakis, B. P. F. Lelieveldt, T. Höllt, and N. F.
+C. C. de Miranda, <span>“Semi‐automated background removal limits data
+loss and normalises imaging mass cytometry data,”</span>
+<em>Cytometry</em>, p. cyto.a.24480, Jun. 2021, doi: <a
+href="https://doi.org/10.1002/cyto.a.24480">10.1002/cyto.a.24480</a>.</div>
+</div>
+<div id="ref-bauduin_potential_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[21] </div><div class="csl-right-inline">S.
+E. E. C. Bauduin <em>et al.</em>, <span>“Potential associations between
+immune signaling genes, deactivated microglia, and oligodendrocytes and
+cortical grey matter loss in patients with long-term remitted
+<span>Cushing</span>’s <span>Disease</span>,”</span>
+<em>Psychoneuroendocrinology</em>, p. 105334, Jun. 2021, doi: <a
+href="https://doi.org/10.1016/j.psyneuen.2021.105334">10.1016/j.psyneuen.2021.105334</a>.</div>
+</div>
+<div id="ref-somarakis_visual_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[22] </div><div class="csl-right-inline">A.
+Somarakis <em>et al.</em>, <span>“Visual <span>Analysis</span> of
+<span>Tissue</span> <span>Images</span> at <span>Cellular</span>
+<span>Level</span>,”</span> <em>EuroVis 2021 - Dirk Bartz Prize</em>,
+pp. 5 pages, 2021, doi: <a
+href="https://doi.org/10.2312/EVM.20211074">10.2312/EVM.20211074</a>.</div>
+</div>
+<div id="ref-aevermann_machine_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[23] </div><div class="csl-right-inline">B.
+D. Aevermann <em>et al.</em>, <span>“A machine learning method for the
+discovery of minimum marker gene combinations for cell-type
+identification from single-cell <span>RNA</span> sequencing,”</span>
+<em>Genome Res.</em>, p. gr.275569.121, Jun. 2021, doi: <a
+href="https://doi.org/10.1101/gr.275569.121">10.1101/gr.275569.121</a>.</div>
+</div>
+<div id="ref-jungen_sympathetic_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[24] </div><div class="csl-right-inline">C.
+Jungen <em>et al.</em>, <span>“Sympathetic innervation pattern in
+<span>NICM</span> patients with ventricular tachycardia -anteroseptal
+versus inferolateral substrates-,”</span> <em>EP Europace</em>, vol. 23,
+no. Supplement_3, p. euab116.340, May 2021, doi: <a
+href="https://doi.org/10.1093/europace/euab116.340">10.1093/europace/euab116.340</a>.</div>
+</div>
+<div id="ref-chen_global_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[25] </div><div class="csl-right-inline">H.
+Chen <em>et al.</em>, <span>“Global cardiac sympathetic denervation is
+associated with diffuse myocardial fibrosis in non-ischemic
+cardiomyopathy,”</span> <em>EP Europace</em>, vol. 23, no. Supplement_3,
+p. euab116.112, May 2021, doi: <a
+href="https://doi.org/10.1093/europace/euab116.112">10.1093/europace/euab116.112</a>.</div>
+</div>
+<div id="ref-amier_cardiac_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[26] </div><div class="csl-right-inline">R.
+Amier <em>et al.</em>, <span>“Cardiac <span>Biomarkers</span> and
+<span>Left</span> <span>Ventricular</span> <span>Function</span> in
+relation to <span>Vascular</span> <span>Brain</span> <span>Injury</span>
+and <span>Cognitive</span> <span>Functioning</span>,”</span> <em>Journal
+of the American College of Cardiology</em>, vol. 77, no. 18, p. 3020,
+May 2021, doi: <a
+href="https://doi.org/10.1016/S0735-1097(21)04375-8">10.1016/S0735-1097(21)04375-8</a>.</div>
+</div>
+<div id="ref-mahdiui_myocardial_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[27] </div><div class="csl-right-inline">M.
+E. Mahdiui <em>et al.</em>, <span>“Myocardial <span>Work</span>, an
+<span>Echocardiographic</span> <span>Measure</span> of <span>Post</span>
+<span>Myocardial</span> <span>Infarct</span> <span>Scar</span> on
+<span>Contrast</span>-<span>Enhanced</span> <span>Cardiac</span>
+<span>Magnetic</span> <span>Resonance</span>,”</span> <em>The American
+Journal of Cardiology</em>, p. S0002914921003623, May 2021, doi: <a
+href="https://doi.org/10.1016/j.amjcard.2021.04.009">10.1016/j.amjcard.2021.04.009</a>.</div>
+</div>
+<div id="ref-elmahdy_joint_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[28] </div><div class="csl-right-inline">M.
+S. Elmahdy <em>et al.</em>, <span>“Joint <span>Registration</span> and
+<span>Segmentation</span> via <span>Multi</span>-<span>Task</span>
+<span>Learning</span> for <span>Adaptive</span>
+<span>Radiotherapy</span> of <span>Prostate</span>
+<span>Cancer</span>,”</span> <em>arXiv:2105.01844 [cs, eess]</em>, May
+2021, Accessed: May 11, 2021. [Online]. Available: <a
+href="http://arxiv.org/abs/2105.01844">http://arxiv.org/abs/2105.01844</a></div>
+</div>
+<div id="ref-de_jong_systems_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[29] </div><div class="csl-right-inline">S.
+E. de Jong <em>et al.</em>, <span>“Systems analysis and controlled
+malaria infection in <span>Europeans</span> and <span>Africans</span>
+elucidate naturally acquired immunity,”</span> <em>Nature
+Immunology</em>, pp. 1–12, Apr. 2021, doi: <a
+href="https://doi.org/10.1038/s41590-021-00911-7">10.1038/s41590-021-00911-7</a>.</div>
+</div>
+<div id="ref-sokooti_hierarchical_2021" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[30] </div><div class="csl-right-inline">H.
+Sokooti, S. Yousefi, M. S. Elmahdy, B. P. F. Lelieveldt, and M. Staring,
+<span>“Hierarchical <span>Prediction</span> of <span>Registration</span>
+<span>Misalignment</span> using a <span>Convolutional</span>
+<span>LSTM</span>: <span>Application</span> to <span>Chest</span>
+<span>CT</span> <span>Scans</span>,”</span> <em>IEEE Access</em>, pp.
+1–1, Apr. 2021, doi: <a
+href="https://doi.org/10.1109/ACCESS.2021.3074124">10.1109/ACCESS.2021.3074124</a>.</div>
+</div>
+<div id="ref-yousefi_esophageal_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[31] </div><div class="csl-right-inline">S.
+Yousefi <em>et al.</em>, <span>“Esophageal <span>Tumor</span>
+<span>Segmentation</span> in <span>CT</span> <span>Images</span> using
+<span>Dilated</span> <span>Dense</span> <span>Attention</span>
+<span>Unet</span> (<span>DDAUnet</span>),”</span> <em>arXiv:2012.03242
+[cs, eess]</em>, Mar. 2021, Accessed: Apr. 28, 2021. [Online].
+Available: <a
+href="http://arxiv.org/abs/2012.03242">http://arxiv.org/abs/2012.03242</a></div>
+</div>
+<div id="ref-zhou_deep_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[32] </div><div class="csl-right-inline">Z.
+Zhou, Y. Wang, B. P. F. Lelieveldt, and Q. Tao, <span>“Deep
+<span>Recursive</span> <span>Embedding</span> for
+<span>High</span>-<span>Dimensional</span> <span>Data</span>,”</span>
+<em>arXiv:2104.05171 [cs]</em>, Apr. 2021, Accessed: Apr. 20, 2021.
+[Online]. Available: <a
+href="http://arxiv.org/abs/2104.05171">http://arxiv.org/abs/2104.05171</a></div>
+</div>
+<div id="ref-kenkhuis_iron_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[33] </div><div class="csl-right-inline">B.
+Kenkhuis <em>et al.</em>, <span>“Iron loading is a prominent feature of
+activated microglia in <span>Alzheimer</span>’s disease
+patients,”</span> <em>acta neuropathol commun</em>, vol. 9, no. 1, p.
+27, Dec. 2021, doi: <a
+href="https://doi.org/10.1186/s40478-021-01126-5">10.1186/s40478-021-01126-5</a>.</div>
+</div>
+<div id="ref-ivashchenko_optimization_2021" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[34] </div><div class="csl-right-inline">O.
+V. Ivashchenko, Z. Zhai, B. C. Stoel, and T. J. M. Ruers,
+<span>“Optimization of hepatic vasculature segmentation from
+contrast-enhanced <span>MRI</span>, exploring two <span>3D</span>
+<span>Unet</span> modifications and various loss functions,”</span> in
+<em>Medical <span>Imaging</span> 2021:
+<span>Image</span>-<span>Guided</span> <span>Procedures</span>,
+<span>Robotic</span> <span>Interventions</span>, and
+<span>Modeling</span></em>, International Society for Optics; Photonics,
+Feb. 2021, p. 115980J. doi: <a
+href="https://doi.org/10.1117/12.2574267">10.1117/12.2574267</a>.</div>
+</div>
+<div id="ref-fleury_threedimensional_2021" class="csl-entry"
+role="listitem">
+<div class="csl-left-margin">[35] </div><div class="csl-right-inline">E.
+Fleury <em>et al.</em>, <span>“Three‐dimensional <span>MRI</span>‐based
+treatment planning approach for non‐invasive ocular proton
+therapy,”</span> <em>Med. Phys.</em>, p. mp.14665, Jan. 2021, doi: <a
+href="https://doi.org/10.1002/mp.14665">10.1002/mp.14665</a>.</div>
+</div>
+</div>
+</body>
+</html>
