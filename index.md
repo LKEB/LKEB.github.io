@@ -12,9 +12,7 @@ Methodologically we develop artificial intelligence and machine learning technol
 - [Pulmonary and Muskoloskeletal Imaging](sections/pmi.md)
 - [Vascular and Molecular Imaging](sections/vmi.md)
 
-## Publications
- - [2024](biblio/2024.md)
- - [2023](biblio/2023.md)
- - [2022](biblio/2022.md)
- - [2021](biblio/2021.md)
- - [2020](biblio/2020.md)
+## [People](people.md)
+
+## [Publications](publications.md)
+
