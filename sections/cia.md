@@ -18,7 +18,7 @@ Our research is dedicated to developing and evaluating innovative image analysis
 ## Software
 Several of the image analysis software algorithms that were developed within our group have been transferred to industry for integration into commercially available clinical end products. Additionally, research software tools developed within the team are widely used in clinical research by numerous national and international centers. Software tools have been developed enabling rapid development of dedicated deep learning models for a specific type of imaging data. Imaging data from large cohort studies can be fully automatically processed using mode processing. The close interaction with research groups often results in opportunities for new research projects granted by national or international funding agencies.
 
-|<div style="width:64px"/>||
+|||
 |--|--|
 |![MASS](mass.png)<br>MASS|A comprehensive software package for the quantitative analysis of cardiovascular MR imaging studies, including analysis of LV function, strain, perfusion, late-enhancement, T1/T2 mapping and intra-cardiac flow analysis of 4D flow MRI|
 |![Flow](flow.png)<br>FLOW|A tool for quantitative flow analysis from standard 2D phase-contrast MRI|
@@ -26,6 +26,7 @@ Several of the image analysis software algorithms that were developed within our
 |![LAVA](lava_small.png)<br>LAVA|Software for 3D segmentation and quantification of vascular structures from TOF and MRA image data|
 
 ## People
+
 |                   |                              |
 |-------------------|------------------------------|
 | Rob van der Geest | Team lead                    |
