@@ -27,7 +27,7 @@
 | ![](photos/Lis-Hsin_Cheng_small.jpg)     | Cheng     | Li-Hsin    | L.Cheng@lumc.nl     |
 | ![](photos/Jeroen_Eggermont_small.jpg)   | Eggermont | Jeroen     | J.Eggermont@lumc.nl |
 | ![](photos/Efe_Ilicak_small.jpg)         | Ilicak    | Efe        | e.ilicak@lumc.nl    |
-|                                          | Kroes     | Thomas     | T.Kroes@lumc.nl     |
+| ![](photos/Thomas_Kroes_small.jpg)       | Kroes     | Thomas     | T.Kroes@lumc.nl     |
 | ![](photos/Silvia_Pintea_small.jpg)      | Pintea    | Silvia     | s.l.pintea@lumc.nl  |
 
 ## PhD candidates
@@ -35,12 +35,12 @@
 |                                           | Last Name     | First Name | Email                    |
 |-------------------------------------------|---------------|------------|--------------------------|
 | ![](photos/Soomyadeep_Basu_small.jpg)     | Basu          | Soumyadeep | s.basu@lumc.nl           |
-|                                           | Beljaards     | Laurens    | L.R.Beljaards@lumc.nl    |
+| ![](photos/Lauren_Beljaards_small.jpg)    | Beljaards     | Laurens    | L.R.Beljaards@lumc.nl    |
 | ![](photos/Yinjie_Chen_small.jpg)         | Chen          | Yunjie     | Y.Chen@lumc.nl           |
 | ![](photos/Qiuyu_Du_small.jpg)            | Qiuyu         | Du         | q.du1@lumc.nl            |
 | ![](photos/Ruochen_Gao_small.jpg)         | Gao           | Ruochen    | r.gao@lumc.nl            |
 | ![](photos/Faeze_Gholamiankhah_small.jpg) | Gholamiankhah | Faeze      | f.gholamiankhah@lumc.nl  |
-|                                           | Li            | Chang      | c.li1@lumc.nl            |
+| ![](photos/Chang_Li_small.jpg)            | Li            | Chang      | c.li1@lumc.nl            |
 | ![](photos/Yanli_Li_small.jpg)            | Li            | Yanli      | y.li2@lumc.nl            |
 | ![](photos/Donghang_Lyu_small.jpg)        | Lyu           | Donghang   | d.lyu@lumc.nl            |
 | ![](photos/Jenia_Makarevich_small.jpg)    | Makarevich    | Jenia      | y.makarevich@lumc.nl     |
@@ -55,11 +55,11 @@
 |                                             | Last Name     | First Name | Email                     |
 |---------------------------------------------|---------------|------------|---------------------------|
 | ![](photos/Niels_Dekker_small.jpg)          | Dekker        | Niels      | C.E.Dekker@lumc.nl        |
-| ![](photos/Michèle_Huijberts_small.jpg)     | Huijberts     | Michèle    | M.W.J.H.Huijberts@lumc.nl |
+| ![](photos/Michele_Huijberts_small.jpg)     | Huijberts     | Michèle    | M.W.J.H.Huijberts@lumc.nl |
 | ![](photos/Patrick_de_Koning_small.jpg)     | Koning, de    | Patrick    | P.J.H.de_Koning@lumc.nl   |
 | ![](photos/Baldur_van_Lew_small.jpg)        | Lew, van      | Baldur     | B.van_Lew@lumc.nl         |
 | ![](photos/Denis_Shamonin_small.jpg)        | Shamonin      | Denis      | D.P.Shamonin@lumc.nl      |
-|                                             | Thijssen      | Julian     | J.G.L.Thijssen@lumc.nl    |
+| ![](photos/Julian_Thijsen_small.jpg)        | Thijssen      | Julian     | J.G.L.Thijssen@lumc.nl    |
 | ![](photos/Vincent_van_der_Sluis_small.jpg) | van der Sluis | Vincent    | v.c.van_der_sluis@lumc.nl |
 
 ## Former chair
