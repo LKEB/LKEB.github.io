@@ -4,6 +4,19 @@ We perform fundamental and applied research in the area of biomedical image proc
 
 Methodologically we develop artificial intelligence and machine learning technologies such as deep learning. We combine these with general computer science methods and mathematical modeling. Our work encompasses segmentation, registration, quantification, visualization, radiomics, etc. To bring our research results close to a clinical end-user we develop high quality software. Our scientific programmers therefore work through a formalized Software Development Process (SDP), often in close collaboration with industry, in particular with [Medis medical imaging systems BV](https://medisimaging.com). This has led to a number of commercially successful products, and spinoff to a number of large medical imaging vendors. The open source image registration software [elastix](https://elastix.dev) is also maintained at LKEB.
 
+## Links
+- [GitHub](https://github.com/lkeb)
+- [GitLab](https://gitlab.com/lkeb)
+- [LinkedIn](https://www.linkedin.com/in/lkeb-lumc-4b86992a8/)
+- [LUMC](https://lkeb.lumc.nl)
+
+## Software
+- [ManiVault](https://www.manivault.studio/)
+- [Cytosplore & Cytosplore Viewer](http://viewer.cytosplore.org/)
+- [SpaceWalker](https://github.com/ManiVaultStudio/SpaceWalker)
+- [BrainScope](http://www.brainscope.nl/)
+- [Elastix](https://elastix.dev)
+
 ## Sections
 - [Biomedical Machine Learning](sections/bml.md)
 - [Cardiovascular Image Analysis](sections/cia.md)

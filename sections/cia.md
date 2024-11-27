@@ -33,4 +33,4 @@ Several of the image analysis software algorithms that were developed within our
 |------------------------------------------------|-------------------|------------------------------|
 | ![](../assets/img/Rob_van_der_Geest_small.jpg) | Rob van der Geest | Team lead                    |
 | ![](../assets/img/Patrick_de_Koning_small.jpg) | Patrick de Koning | Scientific Software Engineer |
-| ![](../assets/img/Lis-Hsin_Cheng_small.jpg)    | Li-Hsin Cheng     | PhD student                  |
+| ![](../assets/img/Lis-Hsin_Cheng_small.jpg)    | Li-Hsin Cheng     | Postdoc                      |
