@@ -5,7 +5,7 @@ This research line aims to develop generic machine learning approaches for autom
 
 Important themes are the application of machine learning methods in radiation therapy, for image segmentation and registration, and in image acquisition and reconstruction. Together with the Department of Radiotherapy we explore the area of adaptive radiation therapy (photon as well as proton, CT as well as MRI), which is an interesting setting for its demand for real-time solutions that are robust to real-life variations in patients. We explore deep learning methods for segmentation of target areas and organs-at-risk, for regression problems such as image registration, and also link the two. Together with the Gorter Center and in collaboration with Philips we develop deep learning methods for accelerated MRI acquisition and reconstruction.
 
-![ ](bml/fastMRI_architecture-768x351.png)
+![](../assets/img/sections/bml/fastMRI_architecture-768x351.png)
 
 Fig. 1. A neural network architecture for MRI reconstruction.
 

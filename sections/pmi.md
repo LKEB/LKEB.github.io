@@ -12,15 +12,19 @@ Together with Rheumatology, our research is focused on deep learning based detec
 
 ## Current projects
 ### Pulmonology
-- [Deep Learning-based Segmentation and Biomarker Regression on Lung CT Images (CSC)](pmi/Deep%20learning%20based%20Segmentation%20and%20biomarker%20regression%20on%20lung%20CT%20Images.md)
-## Orthopaedics
+- [Deep Learning-based Segmentation and Biomarker Regression on Lung CT Images (CSC)](pmi/Deep_learning_based_Segmentation_and_biomarker_regression_on_lung_CT_Images.md)
+
+### Orthopaedics
 - Automatic Structural Allograft Selection from Virtual Bone Bank in Segmental Reconstruction
-## Rheumatology
+
+### Rheumatology
 - [AIMIRA: Artificial-Intelligence-based Comparative MR Imaging in Detecting Inflammatory Changes in Arthralgia Suspicious for Progression to RA (TTW-OTP)](pmi/AIMIRA.md)
 - [ESMIRA: Atlas-based Image Analysis of Inflammatory Markers on Extremity MRI for Early Identification of Rheumatoid Arthritis (STW-HTSM)](pmi/ESMIRA.md)
 - [ESMIRA+: Deep Learning in the Detection of Early Inflammatory Signs in Rheumatoid Arthritis (CSC)](pmi/ESMIRA+.md)
-## Image Quality
+
+### Image Quality
 - Through the eyes of AI: safe and optimal integration of Artificial Intelligence in Radiology
+-
 ## Former projects
 - Evaluation of intra-operative CT and Navigation in Orthopaedic Oncology Surgery
 - Detection and Quantification of the Pulmonary Vascular Tree (CSC)
@@ -42,7 +46,7 @@ Together with Rheumatology, our research is focused on deep learning based detec
 - Measurement of Joint Space Width in assessing Osteoarthritis from Radiographs
 - Detection and quantification of early ischemic changes
 - Absolute Contrast Measurement in Digital X-ay Images
--
+
 ## Associated Researchers
 * Berend C. Stoel, PhD, section head PMI, B.C.Stoel@lumc.nl
 * M. Els Bakker, PhD, scientific researcher, M.E.Bakker@lumc.nl
