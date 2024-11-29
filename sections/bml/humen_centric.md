@@ -16,7 +16,7 @@ We envision a workflow (see Fig. 1) where initially a fully automatic convolutio
 ![](../../assets/img/sections/bml/HCAI-768x194.png)
 Fig. 1: The envisioned workflow.
 
-## Associated researchers
+### Associated researchers
 - Nicolas Chaves-de-Plaza
 - René van Egmond
 - Klaus Hildebrandt
@@ -25,6 +25,6 @@ Fig. 1: The envisioned workflow.
 - Marius Staring
 
 
-## Publications
+### Publications
 - P.P. Mody, N. Chaves-de-Plaza, K. Hildebrandt, R. van Egmond, A. Villanova and M. Staring, “Comparing Bayesian Models for Organ Contouring in Head and Neck Radiotherapy,” SPIE Medical Imaging: Image Processing, in press.
 - N. Chaves-de-Plaza, P.P. Mody, K. Hildebrandt, H. de Ridder, M. Staring and R. van Egmond, “Towards Fast and Robust AI-Infused Human-Centered Contouring Workflows For Adaptive Proton Therapy in the Head and Neck,” European Chapter of the Human Factors and Ergonomics Society, in press.

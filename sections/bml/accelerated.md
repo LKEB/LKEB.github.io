@@ -6,7 +6,7 @@ Magnetic Resonance Imaging (MRI) is a widely applied non-invasive imaging modali
 ![ ](../../assets/img/sections/bml/fastMRI_architecture-768x351.png)
 Fig. 1: A deep learning architecture for accelerated MRI reconstruction.
 
-## Associated researchers
+### Associated researchers
 - Laurens Beljaards
 - Mohamed Elbially
 - Faisal Hasan
@@ -15,6 +15,6 @@ Fig. 1: A deep learning architecture for accelerated MRI reconstruction.
 - Marius Staring
 - Sahar Yousefi
 
-## Publications
+### Publications
 - November 2021, Philips integrates the Adaptive-CS-Net solution in Philips Smart Speed.
 - N. Pezzotti, S. Yousefi, M.S. Elmahdy, et al., “An Adaptive Intelligence Algorithm for Undersampled Knee MRI Reconstruction,” IEEE Access, vol. 8, pp. 204825 – 204838, 2020.

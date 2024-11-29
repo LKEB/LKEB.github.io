@@ -17,7 +17,7 @@ Conventionally, diagnosis of VS is based on various clinical factors: vertigo, t
 
 State-of-the art machine learning and deep learning models hold great promise for both image analysis and risk stratification tasks, by (1) automatically processing multi-sequence MRI, (2) extracting relevant imaging features, and (3) identifying trends and patterns in complex high-dimensional image and clinical data. There is a gap between the state-of-the-art technique and current practice in VS; further research is warranted in this direction to improve the clinical management and treatment of VS patients.
 
-## Associated researchers
+### Associated researchers
 - Yunjie Chen
 - Erik Hensen
 - Olaf Neve
@@ -26,6 +26,6 @@ State-of-the art machine learning and deep learning models hold great promise fo
 - Qian Tao
 - Berit Verbist
 
-## Publications
+### Publications
 - O. Neve, Q. Tao, S. Romeijn, et al., “Fully Automated 3D Vestibular Schwannoma Segmentation: A multicentre multi-vendor study,” European Society of Head and Neck Radiology (ESHNR), September 2021.
 - Q. Tao, S. Romeijn, O. Neve, et al., “Deep-Learning-based Detection and Segmentation of Vestibular Schwannoma: A Multi-Center and Multi-Vendor MRI Study,” RSNA, November 2020.

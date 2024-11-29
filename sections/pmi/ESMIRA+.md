@@ -14,7 +14,7 @@ While MRI is sensitive to early inflammation and RA can be characterized by chro
 
 The goal of this project is to develop a fully-automatic deep learning-based framework for measuring known and unknown RA-related biomarkers, by directly learning from the image data, and discover new imaging biomarkers that could improve diagnostic accuracy, and in the best case, provide additional knowledge about this disease.
 
-Associated researchers:
+### Associated researchers:
 - Yanli Li, MSc, PhD-student
 - Denis Shamonin, MSc
 - Tahereh Hassan-Zadeh, PhD

@@ -32,23 +32,23 @@
 
 ## PhD candidates
 
-|                                               | Last Name     | First Name | Email                    |
-|-----------------------------------------------|---------------|------------|--------------------------|
-| ![](assets/img/Soomyadeep_Basu_small.jpg)     | Basu          | Soumyadeep | s.basu@lumc.nl           |
-| ![](assets/img/Lauren_Beljaards_small.jpg)    | Beljaards     | Laurens    | L.R.Beljaards@lumc.nl    |
-| ![](assets/img/Yinjie_Chen_small.jpg)         | Chen          | Yunjie     | Y.Chen@lumc.nl           |
-| ![](assets/img/Qiuyu_Du_small.jpg)            | Qiuyu         | Du         | q.du1@lumc.nl            |
-| ![](assets/img/Ruochen_Gao_small.jpg)         | Gao           | Ruochen    | r.gao@lumc.nl            |
-| ![](assets/img/Faeze_Gholamiankhah_small.jpg) | Gholamiankhah | Faeze      | f.gholamiankhah@lumc.nl  |
-| ![](assets/img/Chang_Li_small.jpg)            | Li            | Chang      | c.li1@lumc.nl            |
-| ![](assets/img/Yanli_Li_small.jpg)            | Li            | Yanli      | y.li2@lumc.nl            |
-| ![](assets/img/Donghang_Lyu_small.jpg)        | Lyu           | Donghang   | d.lyu@lumc.nl            |
-| ![](assets/img/Jenia_Makarevich_small.jpg)    | Makarevich    | Jenia      | y.makarevich@lumc.nl     |
-| ![](assets/img/Prerak_Mody_small.jpg)         | Mody          | Prerak     | P.P.Mody@lumc.nl         |
-| ![](assets/img/Chinmay_Rao_small.jpg)         | Rao           | Chinmay    | c.s.rao@lumc.nl          |
-| ![](assets/img/Viktor_van_der_Valk_small.jpg) | Valk, van der | Viktor     | V.O.van_der_Valk@lumc.nl |
-| ![](assets/img/Alexander_Vieth_small.jpg)     | Vieth         | Alexander  | A.Vieth@lumc.nl          |
-| ![](assets/img/Xiaotong_Zhang_small.jpg)      | Zhang         | Xiaotong   | x.zhang@lumc.nl          |
+|                                               | Last Name              | First Name | Email                    |
+|-----------------------------------------------|------------------------|------------|--------------------------|
+| ![](assets/img/Soomyadeep_Basu_small.jpg)     | Basu                   | Soumyadeep | s.basu@lumc.nl           |
+| ![](assets/img/Lauren_Beljaards_small.jpg)    | Beljaards              | Laurens    | L.R.Beljaards@lumc.nl    |
+| ![](assets/img/Yinjie_Chen_small.jpg)         | Chen                   | Yunjie     | Y.Chen@lumc.nl           |
+| ![](assets/img/Qiuyu_Du_small.jpg)            | Qiuyu                  | Du         | q.du1@lumc.nl            |
+| ![](assets/img/Ruochen_Gao_small.jpg)         | Gao                    | Ruochen    | r.gao@lumc.nl            |
+| ![](assets/img/Faeze_Gholamiankhah_small.jpg) | Gholamiankhah          | Faeze      | f.gholamiankhah@lumc.nl  |
+| ![](assets/img/Chang_Li_small.jpg)            | Li                     | Chang      | c.li1@lumc.nl            |
+| ![](assets/img/Yanli_Li_small.jpg)            | Li                     | Yanli      | y.li2@lumc.nl            |
+| ![](assets/img/Donghang_Lyu_small.jpg)        | Lyu                    | Donghang   | d.lyu@lumc.nl            |
+| ![](assets/img/Jenia_Makarevich_small.jpg)    | Makarevich             | Jenia      | y.makarevich@lumc.nl     |
+| ![](assets/img/Prerak_Mody_small.jpg)         | [Mody](people/mody.md) | Prerak     | P.P.Mody@lumc.nl         |
+| ![](assets/img/Chinmay_Rao_small.jpg)         | Rao                    | Chinmay    | c.s.rao@lumc.nl          |
+| ![](assets/img/Viktor_van_der_Valk_small.jpg) | Valk, van der          | Viktor     | V.O.van_der_Valk@lumc.nl |
+| ![](assets/img/Alexander_Vieth_small.jpg)     | Vieth                  | Alexander  | A.Vieth@lumc.nl          |
+| ![](assets/img/Xiaotong_Zhang_small.jpg)      | Zhang                  | Xiaotong   | x.zhang@lumc.nl          |
 
 ## Technical staff
 

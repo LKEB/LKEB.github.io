@@ -9,11 +9,11 @@ In this part of the project we will implement real-time quality-control procedur
 
 ![](../../assets/img/sections/bml/WP3-DWIAI-768x190.png)
 
-## Associated researchers
+### Associated researchers
 - Kirsten Koolstra
 - Thijs van Osch
 - Marius Staring
 
-## Publications
+### Publications
 - K. Koolstra, M. Staring, P. de Bruin and M.J.P. van Osch, “Subject-specific optimization of background suppression for arterial spin labeling MRI using a real-time feedback loop on the scanner,” ISMRM, in press.
 - K. Koolstra, M. Staring, P. de Bruin and M.J.P. van Osch, “Individually optimized ASL background suppression using a real-time feedback loop on the scanner,” ESMRMB, October 2021.

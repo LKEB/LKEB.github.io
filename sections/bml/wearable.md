@@ -12,7 +12,7 @@ The analysis of this type of data, however, poses challenges for machine learnin
 
 The area of application is that of cardiovascular disease, specifically patients who suffered from a cardiac ischemia or a cardiac arrest. These patients benefit from close monitoring since relapse or complications often occur. Ambulatory medical devices could facilitate monitoring in this case, which is implemented in the LUMC through what is called ‘The Box’. The collected data contains information such as physical activity or sleep patterns, which possibly influence prognosis. This project focuses on the development of new AI methodology for prognosis prediction and influential factor analysis, in close collaboration with the original creators of The Box.
 
-## Associated researchers
+### Associated researchers
 - Douwe Atsma
 - Roderick Scherptong
 - Marius Staring

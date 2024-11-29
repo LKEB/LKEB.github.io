@@ -2,19 +2,32 @@
 
 # Cardiac Image Analysis
 
-Our research is dedicated to developing and evaluating innovative image analysis methods for the quantitative analysis of cardiovascular imaging data, including cardiac MRI, CT and Ultrasound. Key research areas encompass deep learning-based techniques for segmentation, image registration, abnormality detection and risk prediction. These methods are developed in close collaboration with clinical end-users both nationally and internationally. The primary goals are to optimize clinical workflows and to explore new quantitative imaging biomarkers for diagnosis, risk prediction, and treatment monitoring.
+Magnetic resonance imaging is increasingly used for the evaluation of the cardiovascular system. Often, during a cardiac MR examination multiple scan techniques are applied in order to assess several morphological and functional aspects resulting in a huge amount of images obtained in a single imaging session. MRI is highly suited for quantitative evaluation of the cardiac or vascular status of the patient. The research in the MRI section focuses at the development of new automated quantitative image analysis methods for these cardiovascular MR imaging studies.
 
-## Current and previous research
-* Automated quantitative analysis of cardiac MRI
-* Deep Learning-based segmentation of cardiac MRI
-* Fully automated quantitative analysis of large cohort studies
-* Automated interpretation of cardiac ultrasound exams using Deep Learning
-* Prediction of sudden cardiac death in post-MI patients from LGE MRI
-* Heart-Brain connection study
-* Intra-cardiac flow analysis from 4D flow MRI
-* Quantitative vascular analysis from contrast-enhanced MRA and TOF MRI data
-* Vessel wall MR image analysis
-* Whole body MR image analysis
+Currently, the research is in the following areas:
+1. new contour detection techniques for the detection of the left and right ventricular boundaries.
+2. segmentation techniques for Magnetic Resonance Angiography and vessel wall MRI studies.
+3. new techniques for the assessment of trans-valvular flow and ventricular wall motion using velocity-encoded MRI.
+4. fluid dynamic modeling approaches to assess the flow distribution in carotid arteries.
+5. new techniques for accurate quantification of functional ventricular parameters.
+
+## Projects
+- [Quantification of cardiac ventricular function using MR Imaging (MRI) and Multi Slice Computed Tomography (MASS)](../sections/cia/Quantification_of_Cardiovascular_Magnetic_Resonance_Imaging.md)
+- Automated Evaluation of Vascular MR Image data
+- Automated quantification of vessel wall MR imaging studies (VesselMASS)
+- Image analysis for 4D MR velocity mapping
+- Multi-sequence MRI Carotid Artery Wall Analysis
+- Image analysis for whole-body MR imaging
+- Automated left and right ventricular contour detection in cardiac MR and CT using Active Appearance Models (AAM)
+- Accurate and Reproducible Mitral Valvular Blood Flow Measurement and Quantification of Regurgitation with Three-Directional Velocity-Encoded Magnetic Resonance Imaging
+- MRI to Evaluate Left Ventricular and Left Atrial Reverse Remodeling after Restrictive Mitral Valve Repair
+- Multi-Vis: A Multi-modal Visualisation Environment for Interactive Analysis of Medical Data
+- Development of a fully automatic 3D segmentation and quantification method for analyzing myocardial function
+- Automated quantification of velocity and flow in blood vessels using velocity-encoded cine MRI
+- Acquisition and analysis of magnetic resonance angiographic imaging studies
+- Quantification and visualization of vascular structures from Magnetic Resonance Angiography (MRA)
+- Non-invasive 3D assessment of Wall Shear Stress profiles in carotid arteries for cardiovascular risk factor analyses and prevention
+- Assessment of Left Ventricular Dyssynchrony with Velocity-Encoded MRI
 
 
 ## Software

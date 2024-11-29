@@ -12,7 +12,7 @@ The project results can be found at:
 - PyPi: https://pypi.org/project/itk-elastix/
 - Model Zoo: https://elastix.lumc.nl/modelzoo/
 
-## Associated researchers
+### Associated researchers
 - Niels Dekker
 - Stefan Klein (Erasmus MC)
 - Matt McCormick (Kitware)

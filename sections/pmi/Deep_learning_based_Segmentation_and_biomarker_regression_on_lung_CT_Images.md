@@ -16,13 +16,14 @@ After we obtained the segmentation results of airway, separated arteries and vei
 
 In addition to the two-step biomarker regression method mentioned above, a one-step method to automatically estimate lung disease is to use deep convolutional neural networks to predict biomarkers directly from lung CT scans. The hypothesis is that the raw CT scans include hidden features, which can be extracted by deep learning techniques. The hypothesis was verified by our recent work [3].
 
+### Publications
 1. Jia, J., Zhai, Z., Bakker, M. E., Hernández-Girón, I., Staring, M., & Stoel, B. C. (2021, April). Multi-task Semi-supervised Learning for Pulmonary Lobe Segmentation. In 2021 IEEE 18th International Symposium on Biomedical Imaging (ISBI) (pp. 1329-1332). IEEE.
 
 2. Zhai, Z., Staring, M., Ninaber, M. K., Vries-Bouwstra, J. K. D., Schouffoer, A. A., Kroft, L. J., … & Stoel, B. C. (2019). Pulmonary vascular morphology associated with gas exchange in systemic sclerosis without lung fibrosis. Journal of thoracic imaging, 34(6), 373-379.
 
 3. Jia, J., Staring, M., Hernández-Girón, I., Kroft, L. J., Schouffoer, A. A., & Stoel, B. C. (2021). Prediction of Lung CT Scores of Systemic Sclerosis by Cascaded Regression Neural Networks. arXiv preprint arXiv:2110.08085.
 
-Associated researchers:
-Jingnan Jia, MSc, PhD-student
-Marius Staring, PhD
-Irene Hernández-Girón, PhD
+### Associated researchers:
+- Jingnan Jia, MSc, PhD-student
+- Marius Staring, PhD
+- Irene Hernández-Girón, PhD

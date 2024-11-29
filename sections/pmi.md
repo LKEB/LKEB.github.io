@@ -48,8 +48,8 @@ Together with Rheumatology, our research is focused on deep learning based detec
 - Absolute Contrast Measurement in Digital X-ay Images
 
 ## Associated Researchers
-* Berend C. Stoel, PhD, section head PMI, B.C.Stoel@lumc.nl
-* M. Els Bakker, PhD, scientific researcher, M.E.Bakker@lumc.nl
-* M. Kilany M.A. Hassan, PhD, scientific programmer, M.K.M.A.Hassan@lumc.nl
-* Y. Li, MSc, PhD student, y.li2@lumc.nl
-* Denis Shamonin, MSc, scientific programmer, D.Shamonin@lumc.nl
+- Berend C. Stoel, PhD, section head PMI, B.C.Stoel@lumc.nl
+- M. Els Bakker, PhD, scientific researcher, M.E.Bakker@lumc.nl
+- M. Kilany M.A. Hassan, PhD, scientific programmer, M.K.M.A.Hassan@lumc.nl
+- Y. Li, MSc, PhD student, y.li2@lumc.nl
+- Denis Shamonin, MSc, scientific programmer, D.Shamonin@lumc.nl
