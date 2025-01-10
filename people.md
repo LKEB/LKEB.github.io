@@ -53,19 +53,19 @@
 
 ## Technical staff
 
-|                                                 | Name                  | Email                     |
-|-------------------------------------------------|-----------------------|---------------------------|
-| ![](assets/img/Niels_Dekker_small.jpg)          | Niels Dekker          | C.E.Dekker@lumc.nl        |
-| ![](assets/img/Michele_Huijberts_small.jpg)     | Michèle Huijberts     | M.W.J.H.Huijberts@lumc.nl |
-| ![](assets/img/Patrick_de_Koning_small.jpg)     | Patrick de Koning     | P.J.H.de_Koning@lumc.nl   |
-| ![](assets/img/Baldur_van_Lew_small.jpg)        | Baldur van Lew        | B.van_Lew@lumc.nl         |
-| ![](assets/img/Denis_Shamonin_small.jpg)        | Denis Shamonin        | D.P.Shamonin@lumc.nl      |
-| ![](assets/img/Vincent_van_der_Sluis_small.jpg) | Vincent van der Sluis | V.C.van_der_sluis@lumc.nl |
-| ![](assets/img/Julian_Thijsen_small.jpg)        | Julian Thijssen       | J.G.L.Thijssen@lumc.nl    |
+|                                                 | Name                                                     | Email                     |
+|-------------------------------------------------|----------------------------------------------------------|---------------------------|
+| ![](assets/img/Niels_Dekker_small.jpg)          | [Niels Dekker](people/niels_dekker.md)                   | C.E.Dekker@lumc.nl        |
+| ![](assets/img/Michele_Huijberts_small.jpg)     | [Michèle Huijberts](people/michele_huijberts.md)         | M.W.J.H.Huijberts@lumc.nl |
+| ![](assets/img/Patrick_de_Koning_small.jpg)     | [Patrick de Koning](people/patrick_de_koning.md)         | P.J.H.de_Koning@lumc.nl   |
+| ![](assets/img/Baldur_van_Lew_small.jpg)        | [Baldur van Lew](people/baldur_van_lew.md)               | B.van_Lew@lumc.nl         |
+| ![](assets/img/Denis_Shamonin_small.jpg)        | [Denis Shamonin](people/denis_shamonin.md)               | D.P.Shamonin@lumc.nl      |
+| ![](assets/img/Vincent_van_der_Sluis_small.jpg) | [Vincent van der Sluis](people/vincent_van_der_sluis.md) | V.C.van_der_sluis@lumc.nl |
+| ![](assets/img/Julian_Thijsen_small.jpg)        | [Julian Thijssen](people/julian_thijsen.md)              | J.G.L.Thijssen@lumc.nl    |
 
 
 ## Former chair
 
-|                                       | Name        | Email                |
-|---------------------------------------|-------------|----------------------|
-| ![](assets/img/Hans_Reiber_small.jpg) | Hans Reiber | J.H.C.Reiber@lumc.nl |
+|                                       | Name                                 | Email                |
+|---------------------------------------|--------------------------------------|----------------------|
+| ![](assets/img/Hans_Reiber_small.jpg) | [Hans Reiber](people/hans_reiber.md) | J.H.C.Reiber@lumc.nl |
