@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../cli/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../api/">
+        <link rel="next" href="../usage/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Usage - PACS Retrieve</title>
+        <title>CLI Reference - PACS Retrieve</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#template" class="md-skip">
+        <a href="#cli-reference" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Usage
+              CLI Reference
             
           </span>
         </div>
@@ -225,9 +225,11 @@
   
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../cli/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
   
@@ -244,11 +246,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../usage/" class="md-tabs__link">
         
   
   
@@ -347,28 +347,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../cli/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    CLI Reference
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -386,13 +364,35 @@
   
   
   <span class="md-ellipsis">
-    Usage
+    CLI Reference
     
   </span>
   
 
       </a>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Usage
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -719,79 +719,8 @@
 
 
 
-<p>This needs a settings.json file with the following data:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;server_ae_title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SOMETHING&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&quot;server_ae_ip&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SOMETHING&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">&quot;server_ae_port&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">SOMETHING</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">&quot;client_ae_title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SOMETHING&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">&quot;client_ae_port&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">SOMETHING</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nt">&quot;base_folder&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dumpdir&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nt">&quot;folder_template&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${PatientID}/${StudyDate}/${StudyDescription}/${Modality}/${FolderUID}_${SeriesDescription}&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nt">&quot;study_columns&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Index&quot;</span><span class="p">},</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PatientID&quot;</span><span class="p">},</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;StudyDate&quot;</span><span class="p">},</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;StudyDescription&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;justify&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;left&quot;</span><span class="p">}</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="p">],</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="nt">&quot;series_columns&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Index&quot;</span><span class="p">},</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SeriesInstanceUID&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;justify&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;left&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;no_wrap&quot;</span><span class="p">:</span><span class="w">  </span><span class="kc">true</span><span class="p">},</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Modality&quot;</span><span class="p">},</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SeriesNumber&quot;</span><span class="p">},</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SeriesDescription&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;justify&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;left&quot;</span><span class="p">}</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">  </span><span class="p">]</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="p">}</span>
-</code></pre></div>
-Search strategy for settings file:</p>
-<ol>
-<li><em>'PACS_RETRIEVE_SETTINGS'</em> environment value</li>
-<li><em>'settings.json'</em> in current directory</li>
-<li><em>'~/.config/pacs_retrieve/settings.json'</em></li>
-</ol>
-<h1 id="template">Template<a class="headerlink" href="#template" title="Permanent link">&para;</a></h1>
-<p>Folder template can contain any of the following items:</p>
-<ul>
-<li>PatientName</li>
-<li>PatientID</li>
-<li>StudyDescription</li>
-<li>StudyDate</li>
-<li>StudyTime</li>
-<li>Modality</li>
-<li>SeriesDescription</li>
-<li>SeriesNumber</li>
-<li>SeriesInstanceUID</li>
-<li>FolderUID <em>(Uses the uid_mapping provided to RetrievePacs class)</em></li>
-<li>StudyInstanceUID</li>
-<li>AccessionNumber</li>
-</ul>
-<h1 id="study-columns">study columns:<a class="headerlink" href="#study-columns" title="Permanent link">&para;</a></h1>
-<h3 id="names">names:<a class="headerlink" href="#names" title="Permanent link">&para;</a></h3>
-<ul>
-<li>StudyInstanceUID</li>
-<li>PatientID</li>
-<li>PatientName</li>
-<li>PatientSex</li>
-<li>PatientBirthDate</li>
-<li>StudyID</li>
-<li>StudyDate</li>
-<li>StudyDescription</li>
-<li>StudyTime</li>
-<li>AccessionNumber</li>
-</ul>
-<h3 id="justify">justify<a class="headerlink" href="#justify" title="Permanent link">&para;</a></h3>
-<ul>
-<li>default</li>
-<li>left</li>
-<li>center</li>
-<li>right</li>
-<li>full</li>
-</ul>
-<h3 id="no_wrap">no_wrap<a class="headerlink" href="#no_wrap" title="Permanent link">&para;</a></h3>
-<ul>
-<li>true</li>
-<li>false</li>
-</ul>
+<h1 id="cli-reference">CLI Reference<a class="headerlink" href="#cli-reference" title="Permanent link">&para;</a></h1>
+<p>This page provides documentation for our command line tools.</p>
 
 
 
@@ -842,7 +771,7 @@ Search strategy for settings file:</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../cli/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CLI Reference">
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: PACS retrieve">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -852,20 +781,20 @@ Search strategy for settings file:</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                CLI Reference
+                PACS retrieve
               </div>
             </div>
           </a>
         
         
           
-          <a href="../api/" class="md-footer__link md-footer__link--next" aria-label="Next: API">
+          <a href="../usage/" class="md-footer__link md-footer__link--next" aria-label="Next: Usage">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                API
+                Usage
               </div>
             </div>
             <div class="md-footer__button md-icon">
