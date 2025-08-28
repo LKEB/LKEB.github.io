@@ -16,7 +16,7 @@
     
     
       
-        <title>Print Site - PACS Retrieve</title>
+        <title>Print Site - DICOM Query & Retrieve</title>
       
     
     
@@ -98,7 +98,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="PACS Retrieve" class="md-header__button md-logo" aria-label="PACS Retrieve" data-md-component="logo">
+    <a href=".." title="DICOM Query &amp; Retrieve" class="md-header__button md-logo" aria-label="DICOM Query & Retrieve" data-md-component="logo">
       
   <img src="../images/icons/lkeb.jpg" alt="logo">
 
@@ -111,7 +111,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            PACS Retrieve
+            DICOM Query & Retrieve
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -216,7 +216,7 @@
   
     
   
-  PACS retrieve
+  DICOM QR
 
       </a>
     </li>
@@ -311,12 +311,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="PACS Retrieve" class="md-nav__button md-logo" aria-label="PACS Retrieve" data-md-component="logo">
+    <a href=".." title="DICOM Query &amp; Retrieve" class="md-nav__button md-logo" aria-label="DICOM Query & Retrieve" data-md-component="logo">
       
   <img src="../images/icons/lkeb.jpg" alt="logo">
 
     </a>
-    PACS Retrieve
+    DICOM Query & Retrieve
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -333,7 +333,7 @@
   
   
   <span class="md-ellipsis">
-    PACS retrieve
+    DICOM QR
     
   </span>
   
@@ -702,7 +702,7 @@
         <li class="md-nav__item">
   <a href="#index" class="md-nav__link">
     <span class="md-ellipsis">
-      1 PACS retrieve
+      1 DICOM QR
     </span>
   </a>
   
@@ -855,9 +855,1243 @@
                 </nav>
             </div>
         </section>
-        <section class="print-page" id="index" heading-number="1"><h1 id="index-pacs-retrieve">PACS retrieve<a class="headerlink" href="#index-pacs-retrieve" title="Permanent link">&para;</a></h1>
+        <section class="print-page" id="index" heading-number="1"><h1 id="index-dicom-qr">DICOM QR<a class="headerlink" href="#index-dicom-qr" title="Permanent link">&para;</a></h1>
 <p>Welcome</p></section><section class="print-page" id="cli" heading-number="2"><h1 id="cli-cli-reference">CLI Reference<a class="headerlink" href="#cli-cli-reference" title="Permanent link">&para;</a></h1>
-<p>This page provides documentation for our command line tools.</p></section><section class="print-page" id="usage" heading-number="3"><p>This needs a settings.json file with the following data:
+<p>This page provides documentation for our command line tools.</p>
+<div class="typer-docs">
+<h1 id="cli-dicom-qr">dicom-qr<a class="headerlink" href="#cli-dicom-qr" title="Permanent link">&para;</a></h1>
+<p>DICOM Query &amp; Retrieve tool.</p>
+<h2 id="cli-usage">Usage<a class="headerlink" href="#cli-usage" title="Permanent link">&para;</a></h2>
+<p><code>dicom-qr [OPTIONS] COMMAND [ARGS]...</code></p>
+<h2 id="cli-arguments">Arguments<a class="headerlink" href="#cli-arguments" title="Permanent link">&para;</a></h2>
+<p><em>No arguments available</em></p>
+<h2 id="cli-options">Options<a class="headerlink" href="#cli-options" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--version</code></td>
+<td>Show version info and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>tui</code></td>
+<td>Start the TUI.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>list-series-for-study</code></td>
+<td>Get the series for a study.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>list-studies-name</code></td>
+<td>Get the studies for a patient name,...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>list-studies-patient-id</code></td>
+<td>Get the studies for a patient ID,...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>list-studies-accession-number</code></td>
+<td>List the studies for an accession number,...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>list-studies-date</code></td>
+<td>Get all studies between two dates,...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>studyuid-from-acc-number-file</code></td>
+<td>Load a CSV file, read the column...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>echo-pacs</code></td>
+<td>Send C-ECHO to server.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>download-from-patientid-date</code></td>
+<td>Download the images from the patientID and...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>download-from-name-date</code></td>
+<td>Download the images from the patient name...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>download-from-accession-number</code></td>
+<td>Download the images from the accession...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>download-from-studyuid</code></td>
+<td>Download a study, filtering for modalities.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>download-from-studyuid-file</code></td>
+<td>Download the studies listed in file...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>deident-check-files</code></td>
+<td>Check files against the filters in the...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>deident-retain-patient-id-name</code></td>
+<td>Apply de-identification keeping the...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>deident-replace-patient-id-name</code></td>
+<td>Apply de-identification and use a lookup...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>send-data-to-dicom-node</code></td>
+<td>Send DICOM files in a folder to a DICOM...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cli-sub-commands">Sub Commands<a class="headerlink" href="#cli-sub-commands" title="Permanent link">&para;</a></h2>
+<h3 id="cli-dicom-qr-tui"><code>dicom-qr tui</code><a class="headerlink" href="#cli-dicom-qr-tui" title="Permanent link">&para;</a></h3>
+<p>Start the TUI.</p>
+<h4 id="cli-usage_1">Usage<a class="headerlink" href="#cli-usage_1" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr tui <autoref backlink-anchor="usage_1" backlink-type="referenced-by" identifier="SETTINGS_FILE">OPTIONS</autoref></code></p>
+<h4 id="cli-arguments_1">Arguments<a class="headerlink" href="#cli-arguments_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[SETTINGS_FILE]</code></td>
+<td>[default: settings.json]</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cli-options_1">Options<a class="headerlink" href="#cli-options_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cli-dicom-qr-list-series-for-study"><code>dicom-qr list-series-for-study</code><a class="headerlink" href="#cli-dicom-qr-list-series-for-study" title="Permanent link">&para;</a></h3>
+<p>Get the series for a study.</p>
+<h4 id="cli-usage_2">Usage<a class="headerlink" href="#cli-usage_2" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr list-series-for-study [OPTIONS] STUDY_UID [MODALITIES]...</code></p>
+<h4 id="cli-arguments_2">Arguments<a class="headerlink" href="#cli-arguments_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>STUDY_UID</code></td>
+<td>StudyInstanceUID</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cli-options_2">Options<a class="headerlink" href="#cli-options_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cli-dicom-qr-list-studies-name"><code>dicom-qr list-studies-name</code><a class="headerlink" href="#cli-dicom-qr-list-studies-name" title="Permanent link">&para;</a></h3>
+<p>Get the studies for a patient name, filtering for modalities.</p>
+<h4 id="cli-usage_3">Usage<a class="headerlink" href="#cli-usage_3" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr list-studies-name [OPTIONS] PATIENT_NAME [MODALITIES]...</code></p>
+<h4 id="cli-arguments_3">Arguments<a class="headerlink" href="#cli-arguments_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PATIENT_NAME</code></td>
+<td>Patient name to query</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cli-options_3">Options<a class="headerlink" href="#cli-options_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cli-dicom-qr-list-studies-patient-id"><code>dicom-qr list-studies-patient-id</code><a class="headerlink" href="#cli-dicom-qr-list-studies-patient-id" title="Permanent link">&para;</a></h3>
+<p>Get the studies for a patient ID, filtering for modalities.</p>
+<h4 id="cli-usage_4">Usage<a class="headerlink" href="#cli-usage_4" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr list-studies-patient-id [OPTIONS] PATIENT_ID [MODALITIES]...</code></p>
+<h4 id="cli-arguments_4">Arguments<a class="headerlink" href="#cli-arguments_4" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PATIENT_ID</code></td>
+<td>Patient ID to query</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cli-options_4">Options<a class="headerlink" href="#cli-options_4" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-d, --study_descr TEXT</code></td>
+<td>Study description for filtering</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cli-dicom-qr-list-studies-accession-number"><code>dicom-qr list-studies-accession-number</code><a class="headerlink" href="#cli-dicom-qr-list-studies-accession-number" title="Permanent link">&para;</a></h3>
+<p>List the studies for an accession number, filtering for modalities.</p>
+<h4 id="cli-usage_5">Usage<a class="headerlink" href="#cli-usage_5" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr list-studies-accession-number [OPTIONS] ACCESSION_NUMBER [MODALITIES]...</code></p>
+<h4 id="cli-arguments_5">Arguments<a class="headerlink" href="#cli-arguments_5" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ACCESSION_NUMBER</code></td>
+<td>Accession number (16 characters).</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cli-options_5">Options<a class="headerlink" href="#cli-options_5" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cli-dicom-qr-list-studies-date"><code>dicom-qr list-studies-date</code><a class="headerlink" href="#cli-dicom-qr-list-studies-date" title="Permanent link">&para;</a></h3>
+<p>Get all studies between two dates, filtering any of the study descriptions and modalities.
+Does not download images.
+The number of responses from the PACS is limited, if no results show try more filtering
+(descriptions and/or modalities or shorten the date range).</p>
+<h4 id="cli-usage_6">Usage<a class="headerlink" href="#cli-usage_6" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr list-studies-date [OPTIONS]</code></p>
+<h4 id="cli-arguments_6">Arguments<a class="headerlink" href="#cli-arguments_6" title="Permanent link">&para;</a></h4>
+<p><em>No arguments available</em></p>
+<h4 id="cli-options_6">Options<a class="headerlink" href="#cli-options_6" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-s, --start [%Y-%m-%d|%Y%m%d]</code></td>
+<td>Start date</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-e, --end [%Y-%m-%d|%Y%m%d]</code></td>
+<td>End date  [default: 2025-08-28]</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-d, --study_descr TEXT</code></td>
+<td>Study description for filtering, can be used multiple times.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-p, --patient_id TEXT</code></td>
+<td>Patient ID for filtering</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-m, --modalities TEXT</code></td>
+<td>Modalities used for filtering, can be used multiple times.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cli-dicom-qr-studyuid-from-acc-number-file"><code>dicom-qr studyuid-from-acc-number-file</code><a class="headerlink" href="#cli-dicom-qr-studyuid-from-acc-number-file" title="Permanent link">&para;</a></h3>
+<p>Load a CSV file, read the column 'AccessionNumber' and write all studies to output.
+Does not download images.</p>
+<h4 id="cli-usage_7">Usage<a class="headerlink" href="#cli-usage_7" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr studyuid-from-acc-number-file [OPTIONS] FILENAME [OUTPUT]</code></p>
+<h4 id="cli-arguments_7">Arguments<a class="headerlink" href="#cli-arguments_7" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FILENAME</code></td>
+<td>[required]</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cli-options_7">Options<a class="headerlink" href="#cli-options_7" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cli-dicom-qr-echo-pacs"><code>dicom-qr echo-pacs</code><a class="headerlink" href="#cli-dicom-qr-echo-pacs" title="Permanent link">&para;</a></h3>
+<p>Send C-ECHO to server.</p>
+<h4 id="cli-usage_8">Usage<a class="headerlink" href="#cli-usage_8" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr echo-pacs [OPTIONS]</code></p>
+<h4 id="cli-arguments_8">Arguments<a class="headerlink" href="#cli-arguments_8" title="Permanent link">&para;</a></h4>
+<p><em>No arguments available</em></p>
+<h4 id="cli-options_8">Options<a class="headerlink" href="#cli-options_8" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-v</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cli-dicom-qr-download-from-patientid-date"><code>dicom-qr download-from-patientid-date</code><a class="headerlink" href="#cli-dicom-qr-download-from-patientid-date" title="Permanent link">&para;</a></h3>
+<p>Download the images from the patientID and date, filtering for modalities.</p>
+<h4 id="cli-usage_9">Usage<a class="headerlink" href="#cli-usage_9" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr download-from-patientid-date [OPTIONS] PATIENT_ID STUDY_DATE:[%Y-%m-%d|%Y%m%d]</code></p>
+<h4 id="cli-arguments_9">Arguments<a class="headerlink" href="#cli-arguments_9" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PATIENT_ID</code></td>
+<td>[required]</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>STUDY_DATE:[%Y-%m-%d|%Y%m%d]</code></td>
+<td>[required]</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cli-options_9">Options<a class="headerlink" href="#cli-options_9" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-m, --modality TEXT</code></td>
+<td>Filter series based on modalities</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-s, --sop-class-uid TEXT</code></td>
+<td>Filter series based on SOPClassUID</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--dumpdir DIRECTORY</code></td>
+<td>Override output folder.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cli-dicom-qr-download-from-name-date"><code>dicom-qr download-from-name-date</code><a class="headerlink" href="#cli-dicom-qr-download-from-name-date" title="Permanent link">&para;</a></h3>
+<p>Download the images from the patient name and date, filtering for modalities.</p>
+<h4 id="cli-usage_10">Usage<a class="headerlink" href="#cli-usage_10" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr download-from-name-date [OPTIONS] PATIENT_NAME STUDY_DATE:[%Y-%m-%d|%Y%m%d]</code></p>
+<h4 id="cli-arguments_10">Arguments<a class="headerlink" href="#cli-arguments_10" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PATIENT_NAME</code></td>
+<td>[required]</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>STUDY_DATE:[%Y-%m-%d|%Y%m%d]</code></td>
+<td>[required]</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cli-options_10">Options<a class="headerlink" href="#cli-options_10" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-m, --modality TEXT</code></td>
+<td>Filter series based on modalities</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-s, --sop-class-uid TEXT</code></td>
+<td>Filter series based on SOPClassUID</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--dumpdir DIRECTORY</code></td>
+<td>Override output folder.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cli-dicom-qr-download-from-accession-number"><code>dicom-qr download-from-accession-number</code><a class="headerlink" href="#cli-dicom-qr-download-from-accession-number" title="Permanent link">&para;</a></h3>
+<p>Download the images from the accession number, filtering for modalities.</p>
+<h4 id="cli-usage_11">Usage<a class="headerlink" href="#cli-usage_11" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr download-from-accession-number [OPTIONS] ACCESSION_NUMBER</code></p>
+<h4 id="cli-arguments_11">Arguments<a class="headerlink" href="#cli-arguments_11" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ACCESSION_NUMBER</code></td>
+<td>Accession number.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cli-options_11">Options<a class="headerlink" href="#cli-options_11" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-m, --modality TEXT</code></td>
+<td>Filter series based on modalities</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-s, --sop-class-uid TEXT</code></td>
+<td>Filter series based on SOPClassUID</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--dumpdir DIRECTORY</code></td>
+<td>Override output folder.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cli-dicom-qr-download-from-studyuid"><code>dicom-qr download-from-studyuid</code><a class="headerlink" href="#cli-dicom-qr-download-from-studyuid" title="Permanent link">&para;</a></h3>
+<p>Download a study, filtering for modalities.</p>
+<h4 id="cli-usage_12">Usage<a class="headerlink" href="#cli-usage_12" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr download-from-studyuid [OPTIONS] STUDY_UID</code></p>
+<h4 id="cli-arguments_12">Arguments<a class="headerlink" href="#cli-arguments_12" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>STUDY_UID</code></td>
+<td>Study UID to download</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cli-options_12">Options<a class="headerlink" href="#cli-options_12" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-m, --modality TEXT</code></td>
+<td>Filter series based on modalities</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-s, --sop-class-uid TEXT</code></td>
+<td>Filter series based on SOPClassUID</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--dumpdir DIRECTORY</code></td>
+<td>Override output folder.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--no_store_scp</code></td>
+<td>No local C_STORE SCP server.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cli-dicom-qr-download-from-studyuid-file"><code>dicom-qr download-from-studyuid-file</code><a class="headerlink" href="#cli-dicom-qr-download-from-studyuid-file" title="Permanent link">&para;</a></h3>
+<p>Download the studies listed in file (column name: StudyInstanceUID),
+filtering for modalities and/or sop_class_uid.</p>
+<h4 id="cli-usage_13">Usage<a class="headerlink" href="#cli-usage_13" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr download-from-studyuid-file [OPTIONS] FILENAME</code></p>
+<h4 id="cli-arguments_13">Arguments<a class="headerlink" href="#cli-arguments_13" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FILENAME</code></td>
+<td>Input</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cli-options_13">Options<a class="headerlink" href="#cli-options_13" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-m, --modality TEXT</code></td>
+<td>Filter series based on modalities</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-s, --sop-class-uid TEXT</code></td>
+<td>Filter series based on SOPClassUID</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--already-processed FILE</code></td>
+<td>File with already processed UIDs.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--dumpdir DIRECTORY</code></td>
+<td>Override output folder.  [default: dumpdir]</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cli-dicom-qr-deident-check-files"><code>dicom-qr deident-check-files</code><a class="headerlink" href="#cli-dicom-qr-deident-check-files" title="Permanent link">&para;</a></h3>
+<p>Check files against the filters in the recipe and log the results.</p>
+<h4 id="cli-usage_14">Usage<a class="headerlink" href="#cli-usage_14" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr deident-check-files [OPTIONS] INPUT_DIR</code></p>
+<h4 id="cli-arguments_14">Arguments<a class="headerlink" href="#cli-arguments_14" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>INPUT_DIR</code></td>
+<td>input folder.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cli-options_14">Options<a class="headerlink" href="#cli-options_14" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-r, --recipe PATH</code></td>
+<td>Recipe to de-identify</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cli-dicom-qr-deident-retain-patient-id-name"><code>dicom-qr deident-retain-patient-id-name</code><a class="headerlink" href="#cli-dicom-qr-deident-retain-patient-id-name" title="Permanent link">&para;</a></h3>
+<p>Apply de-identification keeping the existing patient name and id.</p>
+<h4 id="cli-usage_15">Usage<a class="headerlink" href="#cli-usage_15" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr deident-retain-patient-id-name [OPTIONS] INPUT_DIR OUTPUT_DIR</code></p>
+<h4 id="cli-arguments_15">Arguments<a class="headerlink" href="#cli-arguments_15" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>INPUT_DIR</code></td>
+<td>input folder.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>OUTPUT_DIR</code></td>
+<td>output folder.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cli-options_15">Options<a class="headerlink" href="#cli-options_15" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-r, --recipe PATH</code></td>
+<td>Recipe to de-identify</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-l, --log PATH</code></td>
+<td>Log UID lookup to file</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-d, --date-offset INTEGER</code></td>
+<td>Date offset to de-identify</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--xnat-project TEXT</code></td>
+<td>Add PatientComments tag for importing into the correct XNAT project</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--xnat-prefix TEXT</code></td>
+<td>Prefix added subject and session field for XNAT</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cli-dicom-qr-deident-replace-patient-id-name"><code>dicom-qr deident-replace-patient-id-name</code><a class="headerlink" href="#cli-dicom-qr-deident-replace-patient-id-name" title="Permanent link">&para;</a></h3>
+<p>Apply de-identification and use a lookup table to update patient name and id.</p>
+<h4 id="cli-usage_16">Usage<a class="headerlink" href="#cli-usage_16" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr deident-replace-patient-id-name [OPTIONS] INPUT_DIR OUTPUT_DIR PATIENT_MAPPING</code></p>
+<h4 id="cli-arguments_16">Arguments<a class="headerlink" href="#cli-arguments_16" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>INPUT_DIR</code></td>
+<td>input folder.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>OUTPUT_DIR</code></td>
+<td>output folder.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>PATIENT_MAPPING</code></td>
+<td>CSV/XSLX file with the original patient IDs and the new ones.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cli-options_16">Options<a class="headerlink" href="#cli-options_16" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-r, --recipe PATH</code></td>
+<td>Recipe to de-identify</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-l, --log PATH</code></td>
+<td>Log UID lookup to file</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-d, --date-offset INTEGER</code></td>
+<td>Date offset to de-identify</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-e, --time-offset INTEGER</code></td>
+<td>Time offset to de-identify</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--xnat-project TEXT</code></td>
+<td>Add PatientComments tag for importing into the correct XNAT project</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--xnat-prefix TEXT</code></td>
+<td>Prefix added subject and session field for XNAT</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--pixel-anonymize</code></td>
+<td>Perform pixel anonymization</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cli-dicom-qr-send-data-to-dicom-node"><code>dicom-qr send-data-to-dicom-node</code><a class="headerlink" href="#cli-dicom-qr-send-data-to-dicom-node" title="Permanent link">&para;</a></h3>
+<p>Send DICOM files in a folder to a DICOM Store SCP node.</p>
+<h4 id="cli-usage_17">Usage<a class="headerlink" href="#cli-usage_17" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr send-data-to-dicom-node [OPTIONS] DESTINATION PORT DATA_FOLDER</code></p>
+<h4 id="cli-arguments_17">Arguments<a class="headerlink" href="#cli-arguments_17" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DESTINATION</code></td>
+<td>Address of the destination DICOM node</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>PORT</code></td>
+<td>Port of the destination DICOM node</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>DATA_FOLDER</code></td>
+<td>File or folder to upload.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="cli-options_17">Options<a class="headerlink" href="#cli-options_17" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-r, --recursive</code></td>
+<td>Recursive scanning of input</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+</div></section><section class="print-page" id="usage" heading-number="3"><p>This needs a settings.json file with the following data:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#usage-__codelineno-0-1"></a><span class="p">{</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#usage-__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;server_ae_title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SOMETHING&quot;</span><span class="p">,</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#usage-__codelineno-0-3"></a><span class="w">  </span><span class="nt">&quot;server_ae_ip&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SOMETHING&quot;</span><span class="p">,</span>
@@ -1006,7 +2240,7 @@ Search strategy for settings file:</p>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-console_output-__codelineno-0-1"></a><span class="nf">create_series_table</span><span class="p">(</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#api-console_output-__codelineno-0-2"></a>    <span class="n"><autoref identifier="dicom_qr.console_output.create_series_table(series)" optional>series</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="list" optional>list</autoref></span><span class="p">[</span><span class="n"><autoref identifier="dicom_qr.database.SeriesData" optional hover>SeriesData</autoref></span><span class="p">],</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-console_output-__codelineno-0-3"></a>    <span class="n"><autoref identifier="dicom_qr.console_output.create_series_table(title)" optional>title</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="str" backlink-type="used-by" backlink-anchor="dicom_qr.console_output.create_series_table" optional>str</autoref></span> <span class="o">=</span> <span class="s2">&quot;Series found&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#api-console_output-__codelineno-0-4"></a>    <span class="n"><autoref identifier="dicom_qr.console_output.create_series_table(columns)" optional>columns</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="list" optional>list</autoref></span><span class="p">[</span><span class="n"><autoref identifier="dicom_qr.settings.ColumnLayout" optional hover>ColumnLayout</autoref></span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#api-console_output-__codelineno-0-4"></a>    <span class="n"><autoref identifier="dicom_qr.console_output.create_series_table(columns)" optional>columns</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="list" optional>list</autoref></span><span class="p">[</span><span class="n"><autoref identifier="dicom_qr.settings.ColumnLayout" optional hover>ColumnLayout</autoref></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#api-console_output-__codelineno-0-5"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="rich.table.Table" optional hover>Table</autoref></span>
 </code></pre></div>
 
@@ -1063,7 +2297,7 @@ Search strategy for settings file:</p>
 <h3 id="api-console_output-dicom_qr.console_output.create_series_table(columns)" class="doc doc-heading doc-heading-parameter">                  <code>columns</code>
 <a href="#api-console_output-dicom_qr.console_output.create_series_table(columns)" class="headerlink" title="Permanent link">&para;</a></h3>            </td>
             <td>
-                  <code><autoref identifier="typing.Optional" optional hover>Optional</autoref>[<autoref identifier="list" optional>list</autoref>[<autoref identifier="dicom_qr.settings.ColumnLayout" optional hover>ColumnLayout</autoref>]]</code>
+                  <code><autoref identifier="list" optional>list</autoref>[<autoref identifier="dicom_qr.settings.ColumnLayout" optional hover>ColumnLayout</autoref>] | None</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1116,7 +2350,7 @@ Search strategy for settings file:</p>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-console_output-__codelineno-0-1"></a><span class="nf">create_studies_table</span><span class="p">(</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#api-console_output-__codelineno-0-2"></a>    <span class="n"><autoref identifier="dicom_qr.console_output.create_studies_table(studies)" optional>studies</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="list" optional>list</autoref></span><span class="p">[</span><span class="n"><autoref identifier="dicom_qr.database.StudyData" optional hover>StudyData</autoref></span><span class="p">],</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-console_output-__codelineno-0-3"></a>    <span class="n"><autoref identifier="dicom_qr.console_output.create_studies_table(title)" optional>title</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="str" backlink-type="used-by" backlink-anchor="dicom_qr.console_output.create_studies_table" optional>str</autoref></span> <span class="o">=</span> <span class="s2">&quot;Studies found&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#api-console_output-__codelineno-0-4"></a>    <span class="n"><autoref identifier="dicom_qr.console_output.create_studies_table(columns)" optional>columns</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="list" optional>list</autoref></span><span class="p">[</span><span class="n"><autoref identifier="dicom_qr.settings.ColumnLayout" optional hover>ColumnLayout</autoref></span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#api-console_output-__codelineno-0-4"></a>    <span class="n"><autoref identifier="dicom_qr.console_output.create_studies_table(columns)" optional>columns</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="list" optional>list</autoref></span><span class="p">[</span><span class="n"><autoref identifier="dicom_qr.settings.ColumnLayout" optional hover>ColumnLayout</autoref></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#api-console_output-__codelineno-0-5"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="rich.table.Table" optional hover>Table</autoref></span>
 </code></pre></div>
 
@@ -1173,7 +2407,7 @@ Search strategy for settings file:</p>
 <h3 id="api-console_output-dicom_qr.console_output.create_studies_table(columns)" class="doc doc-heading doc-heading-parameter">                  <code>columns</code>
 <a href="#api-console_output-dicom_qr.console_output.create_studies_table(columns)" class="headerlink" title="Permanent link">&para;</a></h3>            </td>
             <td>
-                  <code><autoref identifier="typing.Optional" optional hover>Optional</autoref>[<autoref identifier="list" optional>list</autoref>[<autoref identifier="dicom_qr.settings.ColumnLayout" optional hover>ColumnLayout</autoref>]]</code>
+                  <code><autoref identifier="list" optional>list</autoref>[<autoref identifier="dicom_qr.settings.ColumnLayout" optional hover>ColumnLayout</autoref>] | None</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1321,8 +2555,8 @@ Search strategy for settings file:</p>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-database-__codelineno-0-3"></a>    <span class="n"><autoref identifier="dicom_qr.database.ExportInfo(study_uid)" optional>study_uid</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="str" backlink-type="used-by" backlink-anchor="dicom_qr.database.ExportInfo" optional>str</autoref></span> <span class="o">=</span> <span class="s2">&quot;NA&quot;</span><span class="p">,</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#api-database-__codelineno-0-4"></a>    <span class="n"><autoref identifier="dicom_qr.database.ExportInfo(status)" optional>status</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="dicom_qr.database.Status" backlink-type="used-by" backlink-anchor="dicom_qr.database.ExportInfo" optional hover>Status</autoref></span> <span class="o">=</span> <span class="n"><autoref identifier="dicom_qr.database.Status.UNKNOWN" optional hover>UNKNOWN</autoref></span><span class="p">,</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#api-database-__codelineno-0-5"></a>    <span class="n"><autoref identifier="dicom_qr.database.ExportInfo(destination)" optional>destination</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="pathlib.Path" backlink-type="used-by" backlink-anchor="dicom_qr.database.ExportInfo" optional hover>Path</autoref></span> <span class="o">=</span> <span class="n"><autoref identifier="pathlib.Path" optional hover>Path</autoref></span><span class="p">(),</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#api-database-__codelineno-0-6"></a>    <span class="n"><autoref identifier="dicom_qr.database.ExportInfo(start)" optional>start</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="datetime.datetime" optional hover>datetime</autoref></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#api-database-__codelineno-0-7"></a>    <span class="n"><autoref identifier="dicom_qr.database.ExportInfo(end)" optional>end</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="datetime.datetime" optional hover>datetime</autoref></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#api-database-__codelineno-0-6"></a>    <span class="n"><autoref identifier="dicom_qr.database.ExportInfo(start)" optional>start</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="datetime.datetime" optional hover>datetime</autoref></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#api-database-__codelineno-0-7"></a>    <span class="n"><autoref identifier="dicom_qr.database.ExportInfo(end)" optional>end</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="datetime.datetime" optional hover>datetime</autoref></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#api-database-__codelineno-0-8"></a><span class="p">)</span>
 </code></pre></div>
 
@@ -1411,7 +2645,7 @@ Search strategy for settings file:</p>
           <tr class="doc-section-item">
             <td><code><autoref identifier="dicom_qr.database.ExportInfo.end" optional hover>end</autoref></code></td>
             <td>
-                  <code><autoref identifier="typing.Optional" optional hover>Optional</autoref>[<autoref identifier="datetime.datetime" optional hover>datetime</autoref>]</code>
+                  <code><autoref identifier="datetime.datetime" optional hover>datetime</autoref> | None</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1433,7 +2667,7 @@ Search strategy for settings file:</p>
           <tr class="doc-section-item">
             <td><code><autoref identifier="dicom_qr.database.ExportInfo.start" optional hover>start</autoref></code></td>
             <td>
-                  <code><autoref identifier="typing.Optional" optional hover>Optional</autoref>[<autoref identifier="datetime.datetime" optional hover>datetime</autoref>]</code>
+                  <code><autoref identifier="datetime.datetime" optional hover>datetime</autoref> | None</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -1506,7 +2740,7 @@ Search strategy for settings file:</p>
 
 
 <a href="#api-database-dicom_qr.database.ExportInfo.end" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-database-__codelineno-0-1"></a><span class="n">end</span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="datetime.datetime" optional hover>datetime</autoref></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-database-__codelineno-0-1"></a><span class="n">end</span><span class="p">:</span> <span class="n"><autoref identifier="datetime.datetime" optional hover>datetime</autoref></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -1546,7 +2780,7 @@ Search strategy for settings file:</p>
 
 
 <a href="#api-database-dicom_qr.database.ExportInfo.start" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-database-__codelineno-0-1"></a><span class="n">start</span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="datetime.datetime" optional hover>datetime</autoref></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-database-__codelineno-0-1"></a><span class="n">start</span><span class="p">:</span> <span class="n"><autoref identifier="datetime.datetime" optional hover>datetime</autoref></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -1607,7 +2841,7 @@ Search strategy for settings file:</p>
 
 
 <a href="#api-database-dicom_qr.database.ExportInfo.column_names" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-database-__codelineno-0-1"></a><span class="nf">column_names</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="typing.List" optional hover>List</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-database-__codelineno-0-1"></a><span class="nf">column_names</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="list" optional>list</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -1647,7 +2881,7 @@ Search strategy for settings file:</p>
 
 
 <a href="#api-database-dicom_qr.database.ExportInfo.duration" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-database-__codelineno-0-1"></a><span class="nf">duration</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="datetime.timedelta" optional hover>timedelta</autoref></span><span class="p">]</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-database-__codelineno-0-1"></a><span class="nf">duration</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="datetime.timedelta" optional hover>timedelta</autoref></span> <span class="o">|</span> <span class="kc">None</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -1667,7 +2901,7 @@ Search strategy for settings file:</p>
 
 
 <a href="#api-database-dicom_qr.database.ExportInfo.to_dict" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-database-__codelineno-0-1"></a><span class="nf">to_dict</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="typing.Dict" optional hover>Dict</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">,</span> <span class="n"><autoref identifier="typing.Any" optional hover>Any</autoref></span><span class="p">]</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-database-__codelineno-0-1"></a><span class="nf">to_dict</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="dict" optional>dict</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">,</span> <span class="n"><autoref identifier="typing.Any" optional hover>Any</autoref></span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -1945,7 +3179,7 @@ Search strategy for settings file:</p>
 
 
 <a href="#api-database-dicom_qr.database.SeriesUidMap" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-database-__codelineno-0-1"></a><span class="nf">SeriesUidMap</span><span class="p">(</span><span class="n"><autoref identifier="dicom_qr.database.SeriesUidMap(series)" optional>series</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.List" optional hover>List</autoref></span><span class="p">[</span><span class="n"><autoref identifier="dicom_qr.database.SeriesData" optional hover>SeriesData</autoref></span><span class="p">])</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-database-__codelineno-0-1"></a><span class="nf">SeriesUidMap</span><span class="p">(</span><span class="n"><autoref identifier="dicom_qr.database.SeriesUidMap(series)" optional>series</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="list" optional>list</autoref></span><span class="p">[</span><span class="n"><autoref identifier="dicom_qr.database.SeriesData" optional hover>SeriesData</autoref></span><span class="p">])</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -2757,7 +3991,7 @@ Search strategy for settings file:</p>
 
 
 <a href="#api-database-dicom_qr.database.StudyData.modalities_in_study_is_list" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-database-__codelineno-0-1"></a><span class="nf">modalities_in_study_is_list</span><span class="p">(</span><span class="n"><autoref identifier="dicom_qr.database.StudyData.modalities_in_study_is_list(value)" optional>value</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Any" backlink-type="used-by" backlink-anchor="dicom_qr.database.StudyData.modalities_in_study_is_list" optional hover>Any</autoref></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="list" optional>list</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-database-__codelineno-0-1"></a><span class="nf">modalities_in_study_is_list</span><span class="p">(</span><span class="n"><autoref identifier="dicom_qr.database.StudyData.modalities_in_study_is_list(value)" optional>value</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="str" optional>str</autoref></span> <span class="o">|</span> <span class="n"><autoref identifier="list" optional>list</autoref></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="list" optional>list</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -2777,7 +4011,7 @@ Search strategy for settings file:</p>
 
 
 <a href="#api-database-dicom_qr.database.StudyData.set_patient_name" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-database-__codelineno-0-1"></a><span class="nf">set_patient_name</span><span class="p">(</span><span class="n"><autoref identifier="dicom_qr.database.StudyData.set_patient_name(value)" optional>value</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Any" backlink-type="used-by" backlink-anchor="dicom_qr.database.StudyData.set_patient_name" optional hover>Any</autoref></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="str" backlink-type="returned-by" backlink-anchor="dicom_qr.database.StudyData.set_patient_name" optional>str</autoref></span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-database-__codelineno-0-1"></a><span class="nf">set_patient_name</span><span class="p">(</span><span class="n"><autoref identifier="dicom_qr.database.StudyData.set_patient_name(value)" optional>value</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="pydicom.valuerep.PersonName" optional hover>PersonName</autoref></span> <span class="o">|</span> <span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="str" backlink-type="returned-by" backlink-anchor="dicom_qr.database.StudyData.set_patient_name" optional>str</autoref></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -3090,10 +4324,10 @@ Search strategy for settings file:</p>
 <a href="#api-download-dicom_qr.download.from_accession_number" class="headerlink" title="Permanent link">&para;</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-download-__codelineno-0-1"></a><span class="nf">from_accession_number</span><span class="p">(</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#api-download-__codelineno-0-2"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_accession_number(accession_number)" optional>accession_number</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="str" backlink-type="used-by" backlink-anchor="dicom_qr.download.from_accession_number" optional>str</autoref></span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-download-__codelineno-0-3"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_accession_number(modalities)" optional>modalities</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="typing.Sequence" optional hover>Sequence</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]],</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#api-download-__codelineno-0-4"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_accession_number(retrieve_callback)" optional>retrieve_callback</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="dicom_qr.retrieve_utils.RetrieveResult" optional hover>RetrieveResult</autoref></span><span class="p">],</span> <span class="kc">None</span><span class="p">],</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-download-__codelineno-0-3"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_accession_number(modalities)" optional>modalities</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Sequence" optional hover>Sequence</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#api-download-__codelineno-0-4"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_accession_number(retrieve_callback)" optional>retrieve_callback</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="dicom_qr.retrieve_utils.RetrieveResult" optional hover>RetrieveResult</autoref></span><span class="p">],</span> <span class="kc">None</span><span class="p">],</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#api-download-__codelineno-0-5"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_accession_number(settings)" optional>settings</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="dicom_qr.settings.PacsConfig" backlink-type="used-by" backlink-anchor="dicom_qr.download.from_accession_number" optional hover>PacsConfig</autoref></span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#api-download-__codelineno-0-6"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_accession_number(sop_class_uid)" optional>sop_class_uid</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="typing.Iterable" optional hover>Iterable</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]],</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#api-download-__codelineno-0-6"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_accession_number(sop_class_uid)" optional>sop_class_uid</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Iterable" optional hover>Iterable</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#api-download-__codelineno-0-7"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_accession_number(verbose)" optional>verbose</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="bool" backlink-type="used-by" backlink-anchor="dicom_qr.download.from_accession_number" optional>bool</autoref></span><span class="p">,</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#api-download-__codelineno-0-8"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="list" optional>list</autoref></span><span class="p">[</span><span class="n"><autoref identifier="dicom_qr.database.SeriesData" optional hover>SeriesData</autoref></span><span class="p">]</span>
 </code></pre></div>
@@ -3135,7 +4369,7 @@ Search strategy for settings file:</p>
 <h3 id="api-download-dicom_qr.download.from_accession_number(modalities)" class="doc doc-heading doc-heading-parameter">                  <code>modalities</code>
 <a href="#api-download-dicom_qr.download.from_accession_number(modalities)" class="headerlink" title="Permanent link">&para;</a></h3>            </td>
             <td>
-                  <code><autoref identifier="typing.Optional" optional hover>Optional</autoref>[<autoref identifier="typing.Sequence" optional hover>Sequence</autoref>[<autoref identifier="str" optional>str</autoref>]]</code>
+                  <code><autoref identifier="collections.abc.Sequence" optional hover>Sequence</autoref>[<autoref identifier="str" optional>str</autoref>] | None</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3151,7 +4385,7 @@ Search strategy for settings file:</p>
 <h3 id="api-download-dicom_qr.download.from_accession_number(retrieve_callback)" class="doc doc-heading doc-heading-parameter">                  <code>retrieve_callback</code>
 <a href="#api-download-dicom_qr.download.from_accession_number(retrieve_callback)" class="headerlink" title="Permanent link">&para;</a></h3>            </td>
             <td>
-                  <code><autoref identifier="typing.Callable" optional hover>Callable</autoref>[[<autoref identifier="dicom_qr.retrieve_utils.RetrieveResult" optional hover>RetrieveResult</autoref>], None]</code>
+                  <code><autoref identifier="collections.abc.Callable" optional hover>Callable</autoref>[[<autoref identifier="dicom_qr.retrieve_utils.RetrieveResult" optional hover>RetrieveResult</autoref>], None]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3183,7 +4417,7 @@ Search strategy for settings file:</p>
 <h3 id="api-download-dicom_qr.download.from_accession_number(sop_class_uid)" class="doc doc-heading doc-heading-parameter">                  <code>sop_class_uid</code>
 <a href="#api-download-dicom_qr.download.from_accession_number(sop_class_uid)" class="headerlink" title="Permanent link">&para;</a></h3>            </td>
             <td>
-                  <code><autoref identifier="typing.Optional" optional hover>Optional</autoref>[<autoref identifier="typing.Iterable" optional hover>Iterable</autoref>[<autoref identifier="str" optional>str</autoref>]]</code>
+                  <code><autoref identifier="collections.abc.Iterable" optional hover>Iterable</autoref>[<autoref identifier="str" optional>str</autoref>] | None</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3252,9 +4486,9 @@ Search strategy for settings file:</p>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-download-__codelineno-0-1"></a><span class="nf">from_search</span><span class="p">(</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#api-download-__codelineno-0-2"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_search(search_terms)" optional>search_terms</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="dicom_qr.search.SearchTerms" backlink-type="used-by" backlink-anchor="dicom_qr.download.from_search" optional hover>SearchTerms</autoref></span><span class="p">,</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-download-__codelineno-0-3"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_search(anonymizer)" optional>anonymizer</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="dicom_qr.scp.Anonymizer" backlink-type="used-by" backlink-anchor="dicom_qr.download.from_search" optional hover>Anonymizer</autoref></span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#api-download-__codelineno-0-4"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_search(folder_callback)" optional>folder_callback</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="pathlib.Path" optional hover>Path</autoref></span><span class="p">],</span> <span class="kc">None</span><span class="p">],</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#api-download-__codelineno-0-5"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_search(dumpdir)" optional>dumpdir</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="pathlib.Path" optional hover>Path</autoref></span><span class="p">],</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#api-download-__codelineno-0-6"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_search(sop_class_uid)" optional>sop_class_uid</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="typing.Iterable" optional hover>Iterable</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#api-download-__codelineno-0-4"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_search(folder_callback)" optional>folder_callback</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="pathlib.Path" optional hover>Path</autoref></span><span class="p">],</span> <span class="kc">None</span><span class="p">],</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#api-download-__codelineno-0-5"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_search(dumpdir)" optional>dumpdir</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="pathlib.Path" optional hover>Path</autoref></span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#api-download-__codelineno-0-6"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_search(sop_class_uid)" optional>sop_class_uid</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Iterable" optional hover>Iterable</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#api-download-__codelineno-0-7"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="list" optional>list</autoref></span><span class="p">[</span><span class="n"><autoref identifier="dicom_qr.database.SeriesData" optional hover>SeriesData</autoref></span><span class="p">]</span>
 </code></pre></div>
 
@@ -3311,7 +4545,7 @@ Search strategy for settings file:</p>
 <h3 id="api-download-dicom_qr.download.from_search(folder_callback)" class="doc doc-heading doc-heading-parameter">                  <code>folder_callback</code>
 <a href="#api-download-dicom_qr.download.from_search(folder_callback)" class="headerlink" title="Permanent link">&para;</a></h3>            </td>
             <td>
-                  <code><autoref identifier="typing.Callable" optional hover>Callable</autoref>[[<autoref identifier="pathlib.Path" optional hover>Path</autoref>], None]</code>
+                  <code><autoref identifier="collections.abc.Callable" optional hover>Callable</autoref>[[<autoref identifier="pathlib.Path" optional hover>Path</autoref>], None]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3327,7 +4561,7 @@ Search strategy for settings file:</p>
 <h3 id="api-download-dicom_qr.download.from_search(dumpdir)" class="doc doc-heading doc-heading-parameter">                  <code>dumpdir</code>
 <a href="#api-download-dicom_qr.download.from_search(dumpdir)" class="headerlink" title="Permanent link">&para;</a></h3>            </td>
             <td>
-                  <code><autoref identifier="typing.Optional" optional hover>Optional</autoref>[<autoref identifier="pathlib.Path" optional hover>Path</autoref>]</code>
+                  <code><autoref identifier="pathlib.Path" optional hover>Path</autoref> | None</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3343,7 +4577,7 @@ Search strategy for settings file:</p>
 <h3 id="api-download-dicom_qr.download.from_search(sop_class_uid)" class="doc doc-heading doc-heading-parameter">                  <code>sop_class_uid</code>
 <a href="#api-download-dicom_qr.download.from_search(sop_class_uid)" class="headerlink" title="Permanent link">&para;</a></h3>            </td>
             <td>
-                  <code><autoref identifier="typing.Optional" optional hover>Optional</autoref>[<autoref identifier="typing.Iterable" optional hover>Iterable</autoref>[<autoref identifier="str" optional>str</autoref>]]</code>
+                  <code><autoref identifier="collections.abc.Iterable" optional hover>Iterable</autoref>[<autoref identifier="str" optional>str</autoref>] | None</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3394,10 +4628,10 @@ Search strategy for settings file:</p>
 
 <a href="#api-download-dicom_qr.download.from_study_uid_list" class="headerlink" title="Permanent link">&para;</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-download-__codelineno-0-1"></a><span class="nf">from_study_uid_list</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#api-download-__codelineno-0-2"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_study_uid_list(study_uids)" optional>study_uids</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Sequence" optional hover>Sequence</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">],</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-download-__codelineno-0-3"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_study_uid_list(output_filename)" optional>output_filename</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="pathlib.Path" optional hover>Path</autoref></span><span class="p">],</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#api-download-__codelineno-0-4"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_study_uid_list(modalities)" optional>modalities</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="typing.Sequence" optional hover>Sequence</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]],</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#api-download-__codelineno-0-5"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_study_uid_list(sop_class_uid)" optional>sop_class_uid</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="typing.Iterable" optional hover>Iterable</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]],</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#api-download-__codelineno-0-2"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_study_uid_list(study_uids)" optional>study_uids</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Sequence" optional hover>Sequence</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">],</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-download-__codelineno-0-3"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_study_uid_list(output_filename)" optional>output_filename</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="pathlib.Path" optional hover>Path</autoref></span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#api-download-__codelineno-0-4"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_study_uid_list(modalities)" optional>modalities</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Sequence" optional hover>Sequence</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#api-download-__codelineno-0-5"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_study_uid_list(sop_class_uid)" optional>sop_class_uid</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Iterable" optional hover>Iterable</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#api-download-__codelineno-0-6"></a>    <span class="n"><autoref identifier="dicom_qr.download.from_study_uid_list(settings)" optional>settings</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="dicom_qr.settings.PacsConfig" backlink-type="used-by" backlink-anchor="dicom_qr.download.from_study_uid_list" optional hover>PacsConfig</autoref></span><span class="p">,</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#api-download-__codelineno-0-7"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
@@ -3423,7 +4657,7 @@ Search strategy for settings file:</p>
 <h3 id="api-download-dicom_qr.download.from_study_uid_list(study_uids)" class="doc doc-heading doc-heading-parameter">                  <code>study_uids</code>
 <a href="#api-download-dicom_qr.download.from_study_uid_list(study_uids)" class="headerlink" title="Permanent link">&para;</a></h3>            </td>
             <td>
-                  <code><autoref identifier="typing.Sequence" optional hover>Sequence</autoref>[<autoref identifier="str" optional>str</autoref>]</code>
+                  <code><autoref identifier="collections.abc.Sequence" optional hover>Sequence</autoref>[<autoref identifier="str" optional>str</autoref>]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3439,7 +4673,7 @@ Search strategy for settings file:</p>
 <h3 id="api-download-dicom_qr.download.from_study_uid_list(output_filename)" class="doc doc-heading doc-heading-parameter">                  <code>output_filename</code>
 <a href="#api-download-dicom_qr.download.from_study_uid_list(output_filename)" class="headerlink" title="Permanent link">&para;</a></h3>            </td>
             <td>
-                  <code><autoref identifier="typing.Optional" optional hover>Optional</autoref>[<autoref identifier="pathlib.Path" optional hover>Path</autoref>]</code>
+                  <code><autoref identifier="pathlib.Path" optional hover>Path</autoref> | None</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3455,7 +4689,7 @@ Search strategy for settings file:</p>
 <h3 id="api-download-dicom_qr.download.from_study_uid_list(modalities)" class="doc doc-heading doc-heading-parameter">                  <code>modalities</code>
 <a href="#api-download-dicom_qr.download.from_study_uid_list(modalities)" class="headerlink" title="Permanent link">&para;</a></h3>            </td>
             <td>
-                  <code><autoref identifier="typing.Optional" optional hover>Optional</autoref>[<autoref identifier="typing.Sequence" optional hover>Sequence</autoref>[<autoref identifier="str" optional>str</autoref>]]</code>
+                  <code><autoref identifier="collections.abc.Sequence" optional hover>Sequence</autoref>[<autoref identifier="str" optional>str</autoref>] | None</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3471,7 +4705,7 @@ Search strategy for settings file:</p>
 <h3 id="api-download-dicom_qr.download.from_study_uid_list(sop_class_uid)" class="doc doc-heading doc-heading-parameter">                  <code>sop_class_uid</code>
 <a href="#api-download-dicom_qr.download.from_study_uid_list(sop_class_uid)" class="headerlink" title="Permanent link">&para;</a></h3>            </td>
             <td>
-                  <code><autoref identifier="typing.Optional" optional hover>Optional</autoref>[<autoref identifier="typing.Iterable" optional hover>Iterable</autoref>[<autoref identifier="str" optional>str</autoref>]]</code>
+                  <code><autoref identifier="collections.abc.Iterable" optional hover>Iterable</autoref>[<autoref identifier="str" optional>str</autoref>] | None</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -3702,7 +4936,7 @@ Search strategy for settings file:</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Matches are continuing - Current Match is supplied and any </p>
+                <p>Matches are continuing - Current Match is supplied and any</p>
               </div>
             </td>
           </tr>
@@ -3712,7 +4946,7 @@ Search strategy for settings file:</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Matches are continuing - Warning that one or more </p>
+                <p>Matches are continuing - Warning that one or more</p>
               </div>
             </td>
           </tr>
@@ -3844,7 +5078,7 @@ Search strategy for settings file:</p>
 
     <div class="doc doc-contents ">
 
-        <p>Matches are continuing - Current Match is supplied and any 
+        <p>Matches are continuing - Current Match is supplied and any
 Optional Keys were supported in the same manner as Required Keys.</p>
 
     </div>
@@ -3865,7 +5099,7 @@ Optional Keys were supported in the same manner as Required Keys.</p>
 
     <div class="doc doc-contents ">
 
-        <p>Matches are continuing - Warning that one or more 
+        <p>Matches are continuing - Warning that one or more
 Optional Keys were not supported for existence for this Identifier.</p>
 
     </div>
@@ -4165,7 +5399,7 @@ Optional Keys were not supported for existence for this Identifier.</p>
 <a href="#api-query-dicom_qr.query.QueryPacs.get_series_for_study" class="headerlink" title="Permanent link">&para;</a></h4>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-query-__codelineno-0-1"></a><span class="nf">get_series_for_study</span><span class="p">(</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#api-query-__codelineno-0-2"></a>    <span class="n"><autoref identifier="dicom_qr.query.QueryPacs.get_series_for_study(study_uid)" optional>study_uid</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="str" optional>str</autoref></span> <span class="o">|</span> <span class="n"><autoref identifier="pydicom.dataset.UID" optional hover>UID</autoref></span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-query-__codelineno-0-3"></a>    <span class="n"><autoref identifier="dicom_qr.query.QueryPacs.get_series_for_study(modalities)" optional>modalities</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="typing.Sequence" optional hover>Sequence</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-query-__codelineno-0-3"></a>    <span class="n"><autoref identifier="dicom_qr.query.QueryPacs.get_series_for_study(modalities)" optional>modalities</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Sequence" optional hover>Sequence</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#api-query-__codelineno-0-4"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="list" optional>list</autoref></span><span class="p">[</span><span class="n"><autoref identifier="dicom_qr.database.SeriesData" optional hover>SeriesData</autoref></span><span class="p">]</span>
 </code></pre></div>
 
@@ -4484,15 +5718,15 @@ Optional Keys were not supported for existence for this Identifier.</p>
 <a href="#api-retrieve-dicom_qr.retrieve.get_retrieve" class="headerlink" title="Permanent link">&para;</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-retrieve-__codelineno-0-1"></a><span class="nf">get_retrieve</span><span class="p">(</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#api-retrieve-__codelineno-0-2"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve.get_retrieve(pacs_config)" optional>pacs_config</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="dicom_qr.settings.PacsConfig" backlink-type="used-by" backlink-anchor="dicom_qr.retrieve.get_retrieve" optional hover>PacsConfig</autoref></span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-retrieve-__codelineno-0-3"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve.get_retrieve(uid_mapping)" optional>uid_mapping</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">],</span> <span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">],</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#api-retrieve-__codelineno-0-4"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve.get_retrieve(folder_callback)" optional>folder_callback</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Callable" optional hover>Callable</autoref></span><span class="p">[</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-retrieve-__codelineno-0-3"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve.get_retrieve(uid_mapping)" optional>uid_mapping</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">],</span> <span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">],</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#api-retrieve-__codelineno-0-4"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve.get_retrieve(folder_callback)" optional>folder_callback</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Callable" optional hover>Callable</autoref></span><span class="p">[</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#api-retrieve-__codelineno-0-5"></a>        <span class="p">[</span><span class="n"><autoref identifier="pathlib.Path" optional hover>Path</autoref></span><span class="p">],</span> <span class="kc">None</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#api-retrieve-__codelineno-0-6"></a>    <span class="p">]</span> <span class="o">=</span> <span class="n"><autoref identifier="dicom_qr.scp.dummy_filename_callback" backlink-type="used-by" backlink-anchor="dicom_qr.retrieve.get_retrieve" optional hover>dummy_filename_callback</autoref></span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#api-retrieve-__codelineno-0-7"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve.get_retrieve(retrieve_callback)" optional>retrieve_callback</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Callable" optional hover>Callable</autoref></span><span class="p">[</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#api-retrieve-__codelineno-0-7"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve.get_retrieve(retrieve_callback)" optional>retrieve_callback</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Callable" optional hover>Callable</autoref></span><span class="p">[</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#api-retrieve-__codelineno-0-8"></a>        <span class="p">[</span><span class="n"><autoref identifier="dicom_qr.retrieve_utils.RetrieveResult" optional hover>RetrieveResult</autoref></span><span class="p">],</span> <span class="kc">None</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#api-retrieve-__codelineno-0-9"></a>    <span class="p">]</span> <span class="o">=</span> <span class="n"><autoref identifier="dicom_qr.scp.dummy_retrieve_progress" backlink-type="used-by" backlink-anchor="dicom_qr.retrieve.get_retrieve" optional hover>dummy_retrieve_progress</autoref></span><span class="p">,</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#api-retrieve-__codelineno-0-10"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve.get_retrieve(anonymizer)" optional>anonymizer</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="dicom_qr.scp.Anonymizer" backlink-type="used-by" backlink-anchor="dicom_qr.retrieve.get_retrieve" optional hover>Anonymizer</autoref></span> <span class="o">=</span> <span class="n"><autoref identifier="dicom_qr.scp.dummy_anonymize" backlink-type="used-by" backlink-anchor="dicom_qr.retrieve.get_retrieve" optional hover>dummy_anonymize</autoref></span><span class="p">,</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#api-retrieve-__codelineno-0-11"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve.get_retrieve(sop_class_uid)" optional>sop_class_uid</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="typing.Iterable" optional hover>Iterable</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#api-retrieve-__codelineno-0-11"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve.get_retrieve(sop_class_uid)" optional>sop_class_uid</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Iterable" optional hover>Iterable</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#api-retrieve-__codelineno-0-12"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve.get_retrieve(store_scp)" optional>store_scp</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="bool" backlink-type="used-by" backlink-anchor="dicom_qr.retrieve.get_retrieve" optional>bool</autoref></span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#api-retrieve-__codelineno-0-13"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="dicom_qr.retrieve.RetrievePacs" backlink-type="returned-by" backlink-anchor="dicom_qr.retrieve.get_retrieve" optional hover>RetrievePacs</autoref></span>
 </code></pre></div>
@@ -4577,11 +5811,11 @@ Optional Keys were not supported for existence for this Identifier.</p>
 <a href="#api-retrieve-dicom_qr.retrieve_c_get.RetrievePacsGet" class="headerlink" title="Permanent link">&para;</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-retrieve-__codelineno-0-1"></a><span class="nf">RetrievePacsGet</span><span class="p">(</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#api-retrieve-__codelineno-0-2"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_c_get.RetrievePacsGet(pacs_config)" optional>pacs_config</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="dicom_qr.settings.PacsConfig" backlink-type="used-by" backlink-anchor="dicom_qr.retrieve_c_get.RetrievePacsGet" optional hover>PacsConfig</autoref></span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-retrieve-__codelineno-0-3"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_c_get.RetrievePacsGet(uid_mapping)" optional>uid_mapping</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">],</span> <span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">],</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#api-retrieve-__codelineno-0-4"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_c_get.RetrievePacsGet(folder_callback)" optional>folder_callback</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="pathlib.Path" optional hover>Path</autoref></span><span class="p">],</span> <span class="kc">None</span><span class="p">],</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#api-retrieve-__codelineno-0-5"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_c_get.RetrievePacsGet(retrieve_callback)" optional>retrieve_callback</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="dicom_qr.retrieve_utils.RetrieveResult" optional hover>RetrieveResult</autoref></span><span class="p">],</span> <span class="kc">None</span><span class="p">],</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-retrieve-__codelineno-0-3"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_c_get.RetrievePacsGet(uid_mapping)" optional>uid_mapping</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">],</span> <span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">],</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#api-retrieve-__codelineno-0-4"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_c_get.RetrievePacsGet(folder_callback)" optional>folder_callback</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="pathlib.Path" optional hover>Path</autoref></span><span class="p">],</span> <span class="kc">None</span><span class="p">],</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#api-retrieve-__codelineno-0-5"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_c_get.RetrievePacsGet(retrieve_callback)" optional>retrieve_callback</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="dicom_qr.retrieve_utils.RetrieveResult" optional hover>RetrieveResult</autoref></span><span class="p">],</span> <span class="kc">None</span><span class="p">],</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#api-retrieve-__codelineno-0-6"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_c_get.RetrievePacsGet(anonymizer)" optional>anonymizer</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="dicom_qr.scp.Anonymizer" backlink-type="used-by" backlink-anchor="dicom_qr.retrieve_c_get.RetrievePacsGet" optional hover>Anonymizer</autoref></span> <span class="o">=</span> <span class="n"><autoref identifier="dicom_qr.scp.dummy_anonymize" backlink-type="used-by" backlink-anchor="dicom_qr.retrieve_c_get.RetrievePacsGet" optional hover>dummy_anonymize</autoref></span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#api-retrieve-__codelineno-0-7"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_c_get.RetrievePacsGet(sop_class_uid)" optional>sop_class_uid</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="typing.Iterable" optional hover>Iterable</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#api-retrieve-__codelineno-0-7"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_c_get.RetrievePacsGet(sop_class_uid)" optional>sop_class_uid</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Iterable" optional hover>Iterable</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#api-retrieve-__codelineno-0-8"></a><span class="p">)</span>
 </code></pre></div>
 
@@ -4765,11 +5999,11 @@ Based on <a href="https://github.com/pydicom/pynetdicom/blob/main/pynetdicom/app
 <a href="#api-retrieve-dicom_qr.retrieve_c_move.RetrievePacsMove" class="headerlink" title="Permanent link">&para;</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-retrieve-__codelineno-0-1"></a><span class="nf">RetrievePacsMove</span><span class="p">(</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#api-retrieve-__codelineno-0-2"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_c_move.RetrievePacsMove(pacs_config)" optional>pacs_config</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="dicom_qr.settings.PacsConfig" backlink-type="used-by" backlink-anchor="dicom_qr.retrieve_c_move.RetrievePacsMove" optional hover>PacsConfig</autoref></span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-retrieve-__codelineno-0-3"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_c_move.RetrievePacsMove(uid_mapping)" optional>uid_mapping</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">],</span> <span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">],</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#api-retrieve-__codelineno-0-4"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_c_move.RetrievePacsMove(retrieve_callback)" optional>retrieve_callback</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="dicom_qr.retrieve_utils.RetrieveResult" optional hover>RetrieveResult</autoref></span><span class="p">],</span> <span class="kc">None</span><span class="p">],</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#api-retrieve-__codelineno-0-5"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_c_move.RetrievePacsMove(folder_callback)" optional>folder_callback</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="pathlib.Path" optional hover>Path</autoref></span><span class="p">],</span> <span class="kc">None</span><span class="p">],</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-retrieve-__codelineno-0-3"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_c_move.RetrievePacsMove(uid_mapping)" optional>uid_mapping</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">],</span> <span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">],</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#api-retrieve-__codelineno-0-4"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_c_move.RetrievePacsMove(retrieve_callback)" optional>retrieve_callback</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="dicom_qr.retrieve_utils.RetrieveResult" optional hover>RetrieveResult</autoref></span><span class="p">],</span> <span class="kc">None</span><span class="p">],</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#api-retrieve-__codelineno-0-5"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_c_move.RetrievePacsMove(folder_callback)" optional>folder_callback</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="pathlib.Path" optional hover>Path</autoref></span><span class="p">],</span> <span class="kc">None</span><span class="p">],</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#api-retrieve-__codelineno-0-6"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_c_move.RetrievePacsMove(anonymizer)" optional>anonymizer</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="dicom_qr.scp.Anonymizer" backlink-type="used-by" backlink-anchor="dicom_qr.retrieve_c_move.RetrievePacsMove" optional hover>Anonymizer</autoref></span> <span class="o">=</span> <span class="n"><autoref identifier="dicom_qr.scp.dummy_anonymize" backlink-type="used-by" backlink-anchor="dicom_qr.retrieve_c_move.RetrievePacsMove" optional hover>dummy_anonymize</autoref></span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#api-retrieve-__codelineno-0-7"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_c_move.RetrievePacsMove(sop_class_uid)" optional>sop_class_uid</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="typing.Iterable" optional hover>Iterable</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#api-retrieve-__codelineno-0-7"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_c_move.RetrievePacsMove(sop_class_uid)" optional>sop_class_uid</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Iterable" optional hover>Iterable</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#api-retrieve-__codelineno-0-8"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_c_move.RetrievePacsMove(store_scp)" optional>store_scp</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="bool" backlink-type="used-by" backlink-anchor="dicom_qr.retrieve_c_move.RetrievePacsMove" optional>bool</autoref></span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#api-retrieve-__codelineno-0-9"></a><span class="p">)</span>
 </code></pre></div>
@@ -5710,8 +6944,8 @@ Based on <a href="https://github.com/pydicom/pynetdicom/blob/main/pynetdicom/app
 
 <a href="#api-retrieve-dicom_qr.retrieve_utils.process_responses" class="headerlink" title="Permanent link">&para;</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-retrieve-__codelineno-0-1"></a><span class="nf">process_responses</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#api-retrieve-__codelineno-0-2"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_utils.process_responses(responses)" optional>responses</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Iterator" optional hover>Iterator</autoref></span><span class="p">[</span><span class="n"><autoref identifier="tuple" optional>tuple</autoref></span><span class="p">[</span><span class="n"><autoref identifier="pydicom.Dataset" optional hover>Dataset</autoref></span><span class="p">,</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="pydicom.Dataset" optional hover>Dataset</autoref></span><span class="p">]]],</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-retrieve-__codelineno-0-3"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_utils.process_responses(retrieve_callback)" optional>retrieve_callback</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="dicom_qr.retrieve_utils.RetrieveResult" optional hover>RetrieveResult</autoref></span><span class="p">],</span> <span class="kc">None</span><span class="p">],</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#api-retrieve-__codelineno-0-2"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_utils.process_responses(responses)" optional>responses</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Iterator" optional hover>Iterator</autoref></span><span class="p">[</span><span class="n"><autoref identifier="tuple" optional>tuple</autoref></span><span class="p">[</span><span class="n"><autoref identifier="pydicom.Dataset" optional hover>Dataset</autoref></span><span class="p">,</span> <span class="n"><autoref identifier="pydicom.Dataset" optional hover>Dataset</autoref></span> <span class="o">|</span> <span class="kc">None</span><span class="p">]],</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-retrieve-__codelineno-0-3"></a>    <span class="n"><autoref identifier="dicom_qr.retrieve_utils.process_responses(retrieve_callback)" optional>retrieve_callback</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="dicom_qr.retrieve_utils.RetrieveResult" optional hover>RetrieveResult</autoref></span><span class="p">],</span> <span class="kc">None</span><span class="p">],</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#api-retrieve-__codelineno-0-4"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="dicom_qr.retrieve_utils.RetrieveResult" backlink-type="returned-by" backlink-anchor="dicom_qr.retrieve_utils.process_responses" optional hover>RetrieveResult</autoref></span>
 </code></pre></div>
 
@@ -5862,7 +7096,7 @@ Based on <a href="https://github.com/pydicom/pynetdicom/blob/main/pynetdicom/app
 
 
 <a href="#api-scp-dicom_qr.scp.Anonymizer" class="headerlink" title="Permanent link">&para;</a></h2>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-scp-__codelineno-0-1"></a><span class="n">Anonymizer</span> <span class="o">=</span> <span class="n"><autoref identifier="typing.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="pydicom.Dataset" optional hover>Dataset</autoref></span><span class="p">],</span> <span class="n"><autoref identifier="pydicom.Dataset" optional hover>Dataset</autoref></span><span class="p">]</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-scp-__codelineno-0-1"></a><span class="n">Anonymizer</span> <span class="o">=</span> <span class="n"><autoref identifier="collections.abc.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="pydicom.Dataset" optional hover>Dataset</autoref></span><span class="p">],</span> <span class="n"><autoref identifier="pydicom.Dataset" optional hover>Dataset</autoref></span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -5885,7 +7119,7 @@ Based on <a href="https://github.com/pydicom/pynetdicom/blob/main/pynetdicom/app
 <a href="#api-scp-dicom_qr.scp.dataset_to_filename_template_dict" class="headerlink" title="Permanent link">&para;</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-scp-__codelineno-0-1"></a><span class="nf">dataset_to_filename_template_dict</span><span class="p">(</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#api-scp-__codelineno-0-2"></a>    <span class="n"><autoref identifier="dicom_qr.scp.dataset_to_filename_template_dict(dataset)" optional>dataset</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="pydicom.Dataset" optional hover>Dataset</autoref></span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-scp-__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="typing.Dict" optional hover>Dict</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">,</span> <span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-scp-__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="dict" optional>dict</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">,</span> <span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -6010,9 +7244,9 @@ Based on <a href="https://github.com/pydicom/pynetdicom/blob/main/pynetdicom/app
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-scp-__codelineno-0-3"></a>    <span class="n"><autoref identifier="dicom_qr.scp.handle_store(base_folder)" optional>base_folder</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="pathlib.Path" backlink-type="used-by" backlink-anchor="dicom_qr.scp.handle_store" optional hover>Path</autoref></span><span class="p">,</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#api-scp-__codelineno-0-4"></a>    <span class="n"><autoref identifier="dicom_qr.scp.handle_store(folder_template)" optional>folder_template</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="str" backlink-type="used-by" backlink-anchor="dicom_qr.scp.handle_store" optional>str</autoref></span><span class="p">,</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#api-scp-__codelineno-0-5"></a>    <span class="n"><autoref identifier="dicom_qr.scp.handle_store(anonimyzer)" optional>anonimyzer</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="dicom_qr.scp.Anonymizer" backlink-type="used-by" backlink-anchor="dicom_qr.scp.handle_store" optional hover>Anonymizer</autoref></span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#api-scp-__codelineno-0-6"></a>    <span class="n"><autoref identifier="dicom_qr.scp.handle_store(uid_mapping)" optional>uid_mapping</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">],</span> <span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">],</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#api-scp-__codelineno-0-7"></a>    <span class="n"><autoref identifier="dicom_qr.scp.handle_store(folder_callback)" optional>folder_callback</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="pathlib.Path" optional hover>Path</autoref></span><span class="p">],</span> <span class="kc">None</span><span class="p">],</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#api-scp-__codelineno-0-8"></a>    <span class="n"><autoref identifier="dicom_qr.scp.handle_store(sop_class_uid)" optional>sop_class_uid</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="typing.Iterable" optional hover>Iterable</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]],</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#api-scp-__codelineno-0-6"></a>    <span class="n"><autoref identifier="dicom_qr.scp.handle_store(uid_mapping)" optional>uid_mapping</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">],</span> <span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">],</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#api-scp-__codelineno-0-7"></a>    <span class="n"><autoref identifier="dicom_qr.scp.handle_store(folder_callback)" optional>folder_callback</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Callable" optional hover>Callable</autoref></span><span class="p">[[</span><span class="n"><autoref identifier="pathlib.Path" optional hover>Path</autoref></span><span class="p">],</span> <span class="kc">None</span><span class="p">],</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#api-scp-__codelineno-0-8"></a>    <span class="n"><autoref identifier="dicom_qr.scp.handle_store(sop_class_uid)" optional>sop_class_uid</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Iterable" optional hover>Iterable</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#api-scp-__codelineno-0-9"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="int" backlink-type="returned-by" backlink-anchor="dicom_qr.scp.handle_store" optional>int</autoref></span>
 </code></pre></div>
 
@@ -6101,7 +7335,7 @@ Based on <a href="https://github.com/pydicom/pynetdicom/blob/main/pynetdicom/app
 <h3 id="api-scp-dicom_qr.scp.handle_store(uid_mapping)" class="doc doc-heading doc-heading-parameter">                  <code>uid_mapping</code>
 <a href="#api-scp-dicom_qr.scp.handle_store(uid_mapping)" class="headerlink" title="Permanent link">&para;</a></h3>            </td>
             <td>
-                  <code><autoref identifier="typing.Callable" optional hover>Callable</autoref>[[<autoref identifier="str" optional>str</autoref>], <autoref identifier="str" optional>str</autoref>]</code>
+                  <code><autoref identifier="collections.abc.Callable" optional hover>Callable</autoref>[[<autoref identifier="str" optional>str</autoref>], <autoref identifier="str" optional>str</autoref>]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -6117,7 +7351,7 @@ Based on <a href="https://github.com/pydicom/pynetdicom/blob/main/pynetdicom/app
 <h3 id="api-scp-dicom_qr.scp.handle_store(folder_callback)" class="doc doc-heading doc-heading-parameter">                  <code>folder_callback</code>
 <a href="#api-scp-dicom_qr.scp.handle_store(folder_callback)" class="headerlink" title="Permanent link">&para;</a></h3>            </td>
             <td>
-                  <code><autoref identifier="typing.Callable" optional hover>Callable</autoref>[[<autoref identifier="pathlib.Path" optional hover>Path</autoref>], None]</code>
+                  <code><autoref identifier="collections.abc.Callable" optional hover>Callable</autoref>[[<autoref identifier="pathlib.Path" optional hover>Path</autoref>], None]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -6133,7 +7367,7 @@ Based on <a href="https://github.com/pydicom/pynetdicom/blob/main/pynetdicom/app
 <h3 id="api-scp-dicom_qr.scp.handle_store(sop_class_uid)" class="doc doc-heading doc-heading-parameter">                  <code>sop_class_uid</code>
 <a href="#api-scp-dicom_qr.scp.handle_store(sop_class_uid)" class="headerlink" title="Permanent link">&para;</a></h3>            </td>
             <td>
-                  <code><autoref identifier="typing.Optional" optional hover>Optional</autoref>[<autoref identifier="typing.Iterable" optional hover>Iterable</autoref>[<autoref identifier="str" optional>str</autoref>]]</code>
+                  <code><autoref identifier="collections.abc.Iterable" optional hover>Iterable</autoref>[<autoref identifier="str" optional>str</autoref>] | None</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -6245,17 +7479,15 @@ Based on <a href="https://github.com/pydicom/pynetdicom/blob/main/pynetdicom/app
 
 <a href="#api-search-dicom_qr.search.SearchTerms" class="headerlink" title="Permanent link">&para;</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-search-__codelineno-0-1"></a><span class="nf">SearchTerms</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#api-search-__codelineno-0-2"></a>    <span class="n"><autoref identifier="dicom_qr.search.SearchTerms(date_range)" optional>date_range</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-search-__codelineno-0-3"></a>        <span class="n"><autoref identifier="typing.Union" optional hover>Union</autoref></span><span class="p">[</span><span class="n"><autoref identifier="datetime.date" optional hover>date</autoref></span><span class="p">,</span> <span class="n"><autoref identifier="typing.Tuple" optional hover>Tuple</autoref></span><span class="p">[</span><span class="n"><autoref identifier="datetime.date" optional hover>date</autoref></span><span class="p">,</span> <span class="n"><autoref identifier="datetime.date" optional hover>date</autoref></span><span class="p">]]</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#api-search-__codelineno-0-4"></a>    <span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#api-search-__codelineno-0-5"></a>    <span class="n"><autoref identifier="dicom_qr.search.SearchTerms(timestamp)" optional>timestamp</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#api-search-__codelineno-0-6"></a>    <span class="n"><autoref identifier="dicom_qr.search.SearchTerms(study_desc)" optional>study_desc</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#api-search-__codelineno-0-7"></a>    <span class="n"><autoref identifier="dicom_qr.search.SearchTerms(study_uid)" optional>study_uid</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#api-search-__codelineno-0-8"></a>    <span class="n"><autoref identifier="dicom_qr.search.SearchTerms(patid)" optional>patid</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#api-search-__codelineno-0-9"></a>    <span class="n"><autoref identifier="dicom_qr.search.SearchTerms(pat_name)" optional>pat_name</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#api-search-__codelineno-0-10"></a>    <span class="n"><autoref identifier="dicom_qr.search.SearchTerms(accession_number)" optional>accession_number</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#api-search-__codelineno-0-11"></a>    <span class="n"><autoref identifier="dicom_qr.search.SearchTerms(modalities)" optional>modalities</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Optional" optional hover>Optional</autoref></span><span class="p">[</span><span class="n"><autoref identifier="typing.Sequence" optional hover>Sequence</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#api-search-__codelineno-0-12"></a><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#api-search-__codelineno-0-2"></a>    <span class="n"><autoref identifier="dicom_qr.search.SearchTerms(date_range)" optional>date_range</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="datetime.date" optional hover>date</autoref></span> <span class="o">|</span> <span class="n"><autoref identifier="tuple" optional>tuple</autoref></span><span class="p">[</span><span class="n"><autoref identifier="datetime.date" optional hover>date</autoref></span><span class="p">,</span> <span class="n"><autoref identifier="datetime.date" optional hover>date</autoref></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-search-__codelineno-0-3"></a>    <span class="n"><autoref identifier="dicom_qr.search.SearchTerms(timestamp)" optional>timestamp</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="str" optional>str</autoref></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#api-search-__codelineno-0-4"></a>    <span class="n"><autoref identifier="dicom_qr.search.SearchTerms(study_desc)" optional>study_desc</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="str" optional>str</autoref></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#api-search-__codelineno-0-5"></a>    <span class="n"><autoref identifier="dicom_qr.search.SearchTerms(study_uid)" optional>study_uid</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="str" optional>str</autoref></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#api-search-__codelineno-0-6"></a>    <span class="n"><autoref identifier="dicom_qr.search.SearchTerms(patid)" optional>patid</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="str" optional>str</autoref></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#api-search-__codelineno-0-7"></a>    <span class="n"><autoref identifier="dicom_qr.search.SearchTerms(pat_name)" optional>pat_name</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="str" optional>str</autoref></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#api-search-__codelineno-0-8"></a>    <span class="n"><autoref identifier="dicom_qr.search.SearchTerms(accession_number)" optional>accession_number</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="str" optional>str</autoref></span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#api-search-__codelineno-0-9"></a>    <span class="n"><autoref identifier="dicom_qr.search.SearchTerms(modalities)" optional>modalities</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Sequence" optional hover>Sequence</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#api-search-__codelineno-0-10"></a><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -7097,7 +8329,7 @@ Based on <a href="https://github.com/pydicom/pynetdicom/blob/main/pynetdicom/app
 
 
 <a href="#api-settings-dicom_qr.settings.PacsConfig.load" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-settings-__codelineno-0-1"></a><span class="nf">load</span><span class="p">(</span><span class="n"><autoref identifier="dicom_qr.settings.PacsConfig.load(_filename)" optional>_filename</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Union" optional hover>Union</autoref></span><span class="p">[</span><span class="n"><autoref identifier="pathlib.Path" optional hover>Path</autoref></span><span class="p">,</span> <span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="dicom_qr.settings.PacsConfig" backlink-type="returned-by" backlink-anchor="dicom_qr.settings.PacsConfig.load" optional hover>PacsConfig</autoref></span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-settings-__codelineno-0-1"></a><span class="nf">load</span><span class="p">(</span><span class="n"><autoref identifier="dicom_qr.settings.PacsConfig.load(_filename)" optional>_filename</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="pathlib.Path" optional hover>Path</autoref></span> <span class="o">|</span> <span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="typing.Self" optional hover>Self</autoref></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -7117,7 +8349,7 @@ Based on <a href="https://github.com/pydicom/pynetdicom/blob/main/pynetdicom/app
 
 
 <a href="#api-settings-dicom_qr.settings.PacsConfig.set_port" class="headerlink" title="Permanent link">&para;</a></h3>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-settings-__codelineno-0-1"></a><span class="nf">set_port</span><span class="p">(</span><span class="n"><autoref identifier="dicom_qr.settings.PacsConfig.set_port(value)" optional>value</autoref></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="int" backlink-type="returned-by" backlink-anchor="dicom_qr.settings.PacsConfig.set_port" optional>int</autoref></span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-settings-__codelineno-0-1"></a><span class="nf">set_port</span><span class="p">(</span><span class="n"><autoref identifier="dicom_qr.settings.PacsConfig.set_port(value)" optional>value</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="object" backlink-type="used-by" backlink-anchor="dicom_qr.settings.PacsConfig.set_port" optional>object</autoref></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="int" backlink-type="returned-by" backlink-anchor="dicom_qr.settings.PacsConfig.set_port" optional>int</autoref></span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -7819,7 +9051,7 @@ Based on <a href="https://github.com/pydicom/pynetdicom/blob/main/pynetdicom/app
 
     <div class="doc doc-contents ">
 
-        <p>Get the settings object, uses <autoref backlink-anchor="dicom_qr.settings.get_settings" backlink-type="referenced-by" domain="py" filepath="D:\Python\dicom_qr\src\dicom_qr\settings.py" identifier="dicom_qr.settings.get_settings_filename" lineno="156" origin="dicom_qr.settings.get_settings" role="func">'get_settings_filename'</autoref>
+        <p>Get the settings object, uses <autoref backlink-anchor="dicom_qr.settings.get_settings" backlink-type="referenced-by" domain="py" filepath="D:\Python\dicom_qr\src\dicom_qr\settings.py" identifier="dicom_qr.settings.get_settings_filename" lineno="158" origin="dicom_qr.settings.get_settings" role="func">'get_settings_filename'</autoref>
 to determine final filename used.</p>
 
 
@@ -8049,7 +9281,7 @@ to determine final filename used.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Association Control Service Element (ACSE) timeout in seconds </p>
+                <p>Association Control Service Element (ACSE) timeout in seconds</p>
               </div>
             </td>
           </tr>
@@ -8082,7 +9314,7 @@ to determine final filename used.</p>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>DICOM Message Service Element (DIMSE) timeout in seconds for receiving data. </p>
+                <p>DICOM Message Service Element (DIMSE) timeout in seconds for receiving data.</p>
               </div>
             </td>
           </tr>
@@ -8136,7 +9368,7 @@ to determine final filename used.</p>
 
     <div class="doc doc-contents ">
 
-        <p>Association Control Service Element (ACSE) timeout in seconds 
+        <p>Association Control Service Element (ACSE) timeout in seconds
 used for message timeouts during association negotiation</p>
 
     </div>
@@ -8197,7 +9429,7 @@ used for message timeouts during association negotiation</p>
 
     <div class="doc doc-contents ">
 
-        <p>DICOM Message Service Element (DIMSE) timeout in seconds for receiving data. 
+        <p>DICOM Message Service Element (DIMSE) timeout in seconds for receiving data.
 The SCU will try to read data from the incoming socket stream for the number of seconds configured.</p>
 
     </div>
@@ -8428,7 +9660,7 @@ Based on <a href="https://pydicom.github.io/pynetdicom/stable/examples/storage.h
 
 <a href="#api-store-dicom_qr.store.get_files" class="headerlink" title="Permanent link">&para;</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#api-store-__codelineno-0-1"></a><span class="nf">get_files</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#api-store-__codelineno-0-2"></a>    <span class="n"><autoref identifier="dicom_qr.store.get_files(folders)" optional>folders</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="typing.Iterable" optional hover>Iterable</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">],</span> <span class="n"><autoref identifier="dicom_qr.store.get_files(recurse)" optional>recurse</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="bool" backlink-type="used-by" backlink-anchor="dicom_qr.store.get_files" optional>bool</autoref></span> <span class="o">=</span> <span class="kc">False</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#api-store-__codelineno-0-2"></a>    <span class="n"><autoref identifier="dicom_qr.store.get_files(folders)" optional>folders</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="collections.abc.Iterable" optional hover>Iterable</autoref></span><span class="p">[</span><span class="n"><autoref identifier="str" optional>str</autoref></span><span class="p">],</span> <span class="n"><autoref identifier="dicom_qr.store.get_files(recurse)" optional>recurse</autoref></span><span class="p">:</span> <span class="n"><autoref identifier="bool" backlink-type="used-by" backlink-anchor="dicom_qr.store.get_files" optional>bool</autoref></span> <span class="o">=</span> <span class="kc">False</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#api-store-__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><autoref identifier="list" optional>list</autoref></span><span class="p">[</span><span class="n"><autoref identifier="pathlib.Path" optional hover>Path</autoref></span><span class="p">]</span>
 </code></pre></div>
 
@@ -8453,7 +9685,7 @@ Based on <a href="https://pydicom.github.io/pynetdicom/stable/examples/storage.h
 <h3 id="api-store-dicom_qr.store.get_files(folders)" class="doc doc-heading doc-heading-parameter">                  <code>folders</code>
 <a href="#api-store-dicom_qr.store.get_files(folders)" class="headerlink" title="Permanent link">&para;</a></h3>            </td>
             <td>
-                  <code><autoref identifier="typing.Iterable" optional hover>Iterable</autoref>[<autoref identifier="str" optional>str</autoref>]</code>
+                  <code><autoref identifier="collections.abc.Iterable" optional hover>Iterable</autoref>[<autoref identifier="str" optional>str</autoref>]</code>
             </td>
             <td>
               <div class="doc-md-description">
@@ -8640,7 +9872,7 @@ Based on <a href="https://pydicom.github.io/pynetdicom/stable/examples/storage.h
     
     
     
-    <a href="https://git.lumc.nl/lkeb/lkeb_it-infra/pacs_retrieve" target="_blank" rel="noopener" title="Gitlab" class="md-social__link">
+    <a href="https://git.lumc.nl/lkeb/lkeb_it-infra/dicom_qr" target="_blank" rel="noopener" title="Gitlab" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m503.5 204.6-.7-1.8-69.7-181.78c-1.4-3.57-3.9-6.59-7.2-8.64-2.4-1.55-5.1-2.515-8-2.81s-5.7.083-8.4 1.11c-2.7 1.02-5.1 2.66-7.1 4.78-1.9 2.12-3.3 4.67-4.1 7.44l-47 144H160.8l-47.1-144c-.8-2.77-2.2-5.31-4.1-7.43-2-2.12-4.4-3.75-7.1-4.77a18.1 18.1 0 0 0-8.38-1.113 18.4 18.4 0 0 0-8.04 2.793 18.1 18.1 0 0 0-7.16 8.64L9.267 202.8l-.724 1.8a129.57 129.57 0 0 0-3.52 82c7.747 26.9 24.047 50.7 46.447 67.6l.27.2.59.4 105.97 79.5 52.6 39.7 32 24.2c3.7 1.9 8.3 4.3 13 4.3s9.3-2.4 13-4.3l32-24.2 52.6-39.7 106.7-79.9.3-.3c22.4-16.9 38.7-40.6 45.6-67.5 8.6-27 7.4-55.8-2.6-82"/></svg>
     </a>
   

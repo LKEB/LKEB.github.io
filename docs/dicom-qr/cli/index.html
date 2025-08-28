@@ -20,7 +20,7 @@
     
     
       
-        <title>CLI Reference - PACS Retrieve</title>
+        <title>CLI Reference - DICOM Query & Retrieve</title>
       
     
     
@@ -96,7 +96,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="PACS Retrieve" class="md-header__button md-logo" aria-label="PACS Retrieve" data-md-component="logo">
+    <a href=".." title="DICOM Query &amp; Retrieve" class="md-header__button md-logo" aria-label="DICOM Query & Retrieve" data-md-component="logo">
       
   <img src="../images/icons/lkeb.jpg" alt="logo">
 
@@ -109,7 +109,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            PACS Retrieve
+            DICOM Query & Retrieve
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -214,7 +214,7 @@
   
     
   
-  PACS retrieve
+  DICOM QR
 
       </a>
     </li>
@@ -311,12 +311,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="PACS Retrieve" class="md-nav__button md-logo" aria-label="PACS Retrieve" data-md-component="logo">
+    <a href=".." title="DICOM Query &amp; Retrieve" class="md-nav__button md-logo" aria-label="DICOM Query & Retrieve" data-md-component="logo">
       
   <img src="../images/icons/lkeb.jpg" alt="logo">
 
     </a>
-    PACS Retrieve
+    DICOM Query & Retrieve
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -333,7 +333,7 @@
   
   
   <span class="md-ellipsis">
-    PACS retrieve
+    DICOM QR
     
   </span>
   
@@ -721,6 +721,1240 @@
 
 <h1 id="cli-reference">CLI Reference<a class="headerlink" href="#cli-reference" title="Permanent link">&para;</a></h1>
 <p>This page provides documentation for our command line tools.</p>
+<div class="typer-docs">
+<h1 id="dicom-qr">dicom-qr<a class="headerlink" href="#dicom-qr" title="Permanent link">&para;</a></h1>
+<p>DICOM Query &amp; Retrieve tool.</p>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<p><code>dicom-qr [OPTIONS] COMMAND [ARGS]...</code></p>
+<h2 id="arguments">Arguments<a class="headerlink" href="#arguments" title="Permanent link">&para;</a></h2>
+<p><em>No arguments available</em></p>
+<h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--version</code></td>
+<td>Show version info and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>tui</code></td>
+<td>Start the TUI.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>list-series-for-study</code></td>
+<td>Get the series for a study.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>list-studies-name</code></td>
+<td>Get the studies for a patient name,...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>list-studies-patient-id</code></td>
+<td>Get the studies for a patient ID,...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>list-studies-accession-number</code></td>
+<td>List the studies for an accession number,...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>list-studies-date</code></td>
+<td>Get all studies between two dates,...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>studyuid-from-acc-number-file</code></td>
+<td>Load a CSV file, read the column...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>echo-pacs</code></td>
+<td>Send C-ECHO to server.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>download-from-patientid-date</code></td>
+<td>Download the images from the patientID and...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>download-from-name-date</code></td>
+<td>Download the images from the patient name...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>download-from-accession-number</code></td>
+<td>Download the images from the accession...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>download-from-studyuid</code></td>
+<td>Download a study, filtering for modalities.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>download-from-studyuid-file</code></td>
+<td>Download the studies listed in file...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>deident-check-files</code></td>
+<td>Check files against the filters in the...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>deident-retain-patient-id-name</code></td>
+<td>Apply de-identification keeping the...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>deident-replace-patient-id-name</code></td>
+<td>Apply de-identification and use a lookup...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>send-data-to-dicom-node</code></td>
+<td>Send DICOM files in a folder to a DICOM...</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sub-commands">Sub Commands<a class="headerlink" href="#sub-commands" title="Permanent link">&para;</a></h2>
+<h3 id="dicom-qr-tui"><code>dicom-qr tui</code><a class="headerlink" href="#dicom-qr-tui" title="Permanent link">&para;</a></h3>
+<p>Start the TUI.</p>
+<h4 id="usage_1">Usage<a class="headerlink" href="#usage_1" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr tui [OPTIONS][SETTINGS_FILE]</code></p>
+<h4 id="arguments_1">Arguments<a class="headerlink" href="#arguments_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[SETTINGS_FILE]</code></td>
+<td>[default: settings.json]</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options_1">Options<a class="headerlink" href="#options_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dicom-qr-list-series-for-study"><code>dicom-qr list-series-for-study</code><a class="headerlink" href="#dicom-qr-list-series-for-study" title="Permanent link">&para;</a></h3>
+<p>Get the series for a study.</p>
+<h4 id="usage_2">Usage<a class="headerlink" href="#usage_2" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr list-series-for-study [OPTIONS] STUDY_UID [MODALITIES]...</code></p>
+<h4 id="arguments_2">Arguments<a class="headerlink" href="#arguments_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>STUDY_UID</code></td>
+<td>StudyInstanceUID</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options_2">Options<a class="headerlink" href="#options_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dicom-qr-list-studies-name"><code>dicom-qr list-studies-name</code><a class="headerlink" href="#dicom-qr-list-studies-name" title="Permanent link">&para;</a></h3>
+<p>Get the studies for a patient name, filtering for modalities.</p>
+<h4 id="usage_3">Usage<a class="headerlink" href="#usage_3" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr list-studies-name [OPTIONS] PATIENT_NAME [MODALITIES]...</code></p>
+<h4 id="arguments_3">Arguments<a class="headerlink" href="#arguments_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PATIENT_NAME</code></td>
+<td>Patient name to query</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options_3">Options<a class="headerlink" href="#options_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dicom-qr-list-studies-patient-id"><code>dicom-qr list-studies-patient-id</code><a class="headerlink" href="#dicom-qr-list-studies-patient-id" title="Permanent link">&para;</a></h3>
+<p>Get the studies for a patient ID, filtering for modalities.</p>
+<h4 id="usage_4">Usage<a class="headerlink" href="#usage_4" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr list-studies-patient-id [OPTIONS] PATIENT_ID [MODALITIES]...</code></p>
+<h4 id="arguments_4">Arguments<a class="headerlink" href="#arguments_4" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PATIENT_ID</code></td>
+<td>Patient ID to query</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options_4">Options<a class="headerlink" href="#options_4" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-d, --study_descr TEXT</code></td>
+<td>Study description for filtering</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dicom-qr-list-studies-accession-number"><code>dicom-qr list-studies-accession-number</code><a class="headerlink" href="#dicom-qr-list-studies-accession-number" title="Permanent link">&para;</a></h3>
+<p>List the studies for an accession number, filtering for modalities.</p>
+<h4 id="usage_5">Usage<a class="headerlink" href="#usage_5" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr list-studies-accession-number [OPTIONS] ACCESSION_NUMBER [MODALITIES]...</code></p>
+<h4 id="arguments_5">Arguments<a class="headerlink" href="#arguments_5" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ACCESSION_NUMBER</code></td>
+<td>Accession number (16 characters).</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options_5">Options<a class="headerlink" href="#options_5" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dicom-qr-list-studies-date"><code>dicom-qr list-studies-date</code><a class="headerlink" href="#dicom-qr-list-studies-date" title="Permanent link">&para;</a></h3>
+<p>Get all studies between two dates, filtering any of the study descriptions and modalities.
+Does not download images.
+The number of responses from the PACS is limited, if no results show try more filtering
+(descriptions and/or modalities or shorten the date range).</p>
+<h4 id="usage_6">Usage<a class="headerlink" href="#usage_6" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr list-studies-date [OPTIONS]</code></p>
+<h4 id="arguments_6">Arguments<a class="headerlink" href="#arguments_6" title="Permanent link">&para;</a></h4>
+<p><em>No arguments available</em></p>
+<h4 id="options_6">Options<a class="headerlink" href="#options_6" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-s, --start [%Y-%m-%d|%Y%m%d]</code></td>
+<td>Start date</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-e, --end [%Y-%m-%d|%Y%m%d]</code></td>
+<td>End date  [default: 2025-08-28]</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-d, --study_descr TEXT</code></td>
+<td>Study description for filtering, can be used multiple times.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-p, --patient_id TEXT</code></td>
+<td>Patient ID for filtering</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-m, --modalities TEXT</code></td>
+<td>Modalities used for filtering, can be used multiple times.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dicom-qr-studyuid-from-acc-number-file"><code>dicom-qr studyuid-from-acc-number-file</code><a class="headerlink" href="#dicom-qr-studyuid-from-acc-number-file" title="Permanent link">&para;</a></h3>
+<p>Load a CSV file, read the column 'AccessionNumber' and write all studies to output.
+Does not download images.</p>
+<h4 id="usage_7">Usage<a class="headerlink" href="#usage_7" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr studyuid-from-acc-number-file [OPTIONS] FILENAME [OUTPUT]</code></p>
+<h4 id="arguments_7">Arguments<a class="headerlink" href="#arguments_7" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FILENAME</code></td>
+<td>[required]</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options_7">Options<a class="headerlink" href="#options_7" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dicom-qr-echo-pacs"><code>dicom-qr echo-pacs</code><a class="headerlink" href="#dicom-qr-echo-pacs" title="Permanent link">&para;</a></h3>
+<p>Send C-ECHO to server.</p>
+<h4 id="usage_8">Usage<a class="headerlink" href="#usage_8" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr echo-pacs [OPTIONS]</code></p>
+<h4 id="arguments_8">Arguments<a class="headerlink" href="#arguments_8" title="Permanent link">&para;</a></h4>
+<p><em>No arguments available</em></p>
+<h4 id="options_8">Options<a class="headerlink" href="#options_8" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-v</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dicom-qr-download-from-patientid-date"><code>dicom-qr download-from-patientid-date</code><a class="headerlink" href="#dicom-qr-download-from-patientid-date" title="Permanent link">&para;</a></h3>
+<p>Download the images from the patientID and date, filtering for modalities.</p>
+<h4 id="usage_9">Usage<a class="headerlink" href="#usage_9" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr download-from-patientid-date [OPTIONS] PATIENT_ID STUDY_DATE:[%Y-%m-%d|%Y%m%d]</code></p>
+<h4 id="arguments_9">Arguments<a class="headerlink" href="#arguments_9" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PATIENT_ID</code></td>
+<td>[required]</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>STUDY_DATE:[%Y-%m-%d|%Y%m%d]</code></td>
+<td>[required]</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options_9">Options<a class="headerlink" href="#options_9" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-m, --modality TEXT</code></td>
+<td>Filter series based on modalities</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-s, --sop-class-uid TEXT</code></td>
+<td>Filter series based on SOPClassUID</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--dumpdir DIRECTORY</code></td>
+<td>Override output folder.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dicom-qr-download-from-name-date"><code>dicom-qr download-from-name-date</code><a class="headerlink" href="#dicom-qr-download-from-name-date" title="Permanent link">&para;</a></h3>
+<p>Download the images from the patient name and date, filtering for modalities.</p>
+<h4 id="usage_10">Usage<a class="headerlink" href="#usage_10" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr download-from-name-date [OPTIONS] PATIENT_NAME STUDY_DATE:[%Y-%m-%d|%Y%m%d]</code></p>
+<h4 id="arguments_10">Arguments<a class="headerlink" href="#arguments_10" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PATIENT_NAME</code></td>
+<td>[required]</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>STUDY_DATE:[%Y-%m-%d|%Y%m%d]</code></td>
+<td>[required]</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options_10">Options<a class="headerlink" href="#options_10" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-m, --modality TEXT</code></td>
+<td>Filter series based on modalities</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-s, --sop-class-uid TEXT</code></td>
+<td>Filter series based on SOPClassUID</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--dumpdir DIRECTORY</code></td>
+<td>Override output folder.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dicom-qr-download-from-accession-number"><code>dicom-qr download-from-accession-number</code><a class="headerlink" href="#dicom-qr-download-from-accession-number" title="Permanent link">&para;</a></h3>
+<p>Download the images from the accession number, filtering for modalities.</p>
+<h4 id="usage_11">Usage<a class="headerlink" href="#usage_11" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr download-from-accession-number [OPTIONS] ACCESSION_NUMBER</code></p>
+<h4 id="arguments_11">Arguments<a class="headerlink" href="#arguments_11" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ACCESSION_NUMBER</code></td>
+<td>Accession number.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options_11">Options<a class="headerlink" href="#options_11" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-m, --modality TEXT</code></td>
+<td>Filter series based on modalities</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-s, --sop-class-uid TEXT</code></td>
+<td>Filter series based on SOPClassUID</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--dumpdir DIRECTORY</code></td>
+<td>Override output folder.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dicom-qr-download-from-studyuid"><code>dicom-qr download-from-studyuid</code><a class="headerlink" href="#dicom-qr-download-from-studyuid" title="Permanent link">&para;</a></h3>
+<p>Download a study, filtering for modalities.</p>
+<h4 id="usage_12">Usage<a class="headerlink" href="#usage_12" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr download-from-studyuid [OPTIONS] STUDY_UID</code></p>
+<h4 id="arguments_12">Arguments<a class="headerlink" href="#arguments_12" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>STUDY_UID</code></td>
+<td>Study UID to download</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options_12">Options<a class="headerlink" href="#options_12" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-m, --modality TEXT</code></td>
+<td>Filter series based on modalities</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-s, --sop-class-uid TEXT</code></td>
+<td>Filter series based on SOPClassUID</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--dumpdir DIRECTORY</code></td>
+<td>Override output folder.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--no_store_scp</code></td>
+<td>No local C_STORE SCP server.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dicom-qr-download-from-studyuid-file"><code>dicom-qr download-from-studyuid-file</code><a class="headerlink" href="#dicom-qr-download-from-studyuid-file" title="Permanent link">&para;</a></h3>
+<p>Download the studies listed in file (column name: StudyInstanceUID),
+filtering for modalities and/or sop_class_uid.</p>
+<h4 id="usage_13">Usage<a class="headerlink" href="#usage_13" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr download-from-studyuid-file [OPTIONS] FILENAME</code></p>
+<h4 id="arguments_13">Arguments<a class="headerlink" href="#arguments_13" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FILENAME</code></td>
+<td>Input</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options_13">Options<a class="headerlink" href="#options_13" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-m, --modality TEXT</code></td>
+<td>Filter series based on modalities</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-s, --sop-class-uid TEXT</code></td>
+<td>Filter series based on SOPClassUID</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--already-processed FILE</code></td>
+<td>File with already processed UIDs.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--dumpdir DIRECTORY</code></td>
+<td>Override output folder.  [default: dumpdir]</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dicom-qr-deident-check-files"><code>dicom-qr deident-check-files</code><a class="headerlink" href="#dicom-qr-deident-check-files" title="Permanent link">&para;</a></h3>
+<p>Check files against the filters in the recipe and log the results.</p>
+<h4 id="usage_14">Usage<a class="headerlink" href="#usage_14" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr deident-check-files [OPTIONS] INPUT_DIR</code></p>
+<h4 id="arguments_14">Arguments<a class="headerlink" href="#arguments_14" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>INPUT_DIR</code></td>
+<td>input folder.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options_14">Options<a class="headerlink" href="#options_14" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-r, --recipe PATH</code></td>
+<td>Recipe to de-identify</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dicom-qr-deident-retain-patient-id-name"><code>dicom-qr deident-retain-patient-id-name</code><a class="headerlink" href="#dicom-qr-deident-retain-patient-id-name" title="Permanent link">&para;</a></h3>
+<p>Apply de-identification keeping the existing patient name and id.</p>
+<h4 id="usage_15">Usage<a class="headerlink" href="#usage_15" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr deident-retain-patient-id-name [OPTIONS] INPUT_DIR OUTPUT_DIR</code></p>
+<h4 id="arguments_15">Arguments<a class="headerlink" href="#arguments_15" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>INPUT_DIR</code></td>
+<td>input folder.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>OUTPUT_DIR</code></td>
+<td>output folder.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options_15">Options<a class="headerlink" href="#options_15" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-r, --recipe PATH</code></td>
+<td>Recipe to de-identify</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-l, --log PATH</code></td>
+<td>Log UID lookup to file</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-d, --date-offset INTEGER</code></td>
+<td>Date offset to de-identify</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--xnat-project TEXT</code></td>
+<td>Add PatientComments tag for importing into the correct XNAT project</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--xnat-prefix TEXT</code></td>
+<td>Prefix added subject and session field for XNAT</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dicom-qr-deident-replace-patient-id-name"><code>dicom-qr deident-replace-patient-id-name</code><a class="headerlink" href="#dicom-qr-deident-replace-patient-id-name" title="Permanent link">&para;</a></h3>
+<p>Apply de-identification and use a lookup table to update patient name and id.</p>
+<h4 id="usage_16">Usage<a class="headerlink" href="#usage_16" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr deident-replace-patient-id-name [OPTIONS] INPUT_DIR OUTPUT_DIR PATIENT_MAPPING</code></p>
+<h4 id="arguments_16">Arguments<a class="headerlink" href="#arguments_16" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>INPUT_DIR</code></td>
+<td>input folder.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>OUTPUT_DIR</code></td>
+<td>output folder.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>PATIENT_MAPPING</code></td>
+<td>CSV/XSLX file with the original patient IDs and the new ones.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options_16">Options<a class="headerlink" href="#options_16" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-r, --recipe PATH</code></td>
+<td>Recipe to de-identify</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-l, --log PATH</code></td>
+<td>Log UID lookup to file</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-d, --date-offset INTEGER</code></td>
+<td>Date offset to de-identify</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-e, --time-offset INTEGER</code></td>
+<td>Time offset to de-identify</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--xnat-project TEXT</code></td>
+<td>Add PatientComments tag for importing into the correct XNAT project</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--xnat-prefix TEXT</code></td>
+<td>Prefix added subject and session field for XNAT</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--pixel-anonymize</code></td>
+<td>Perform pixel anonymization</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dicom-qr-send-data-to-dicom-node"><code>dicom-qr send-data-to-dicom-node</code><a class="headerlink" href="#dicom-qr-send-data-to-dicom-node" title="Permanent link">&para;</a></h3>
+<p>Send DICOM files in a folder to a DICOM Store SCP node.</p>
+<h4 id="usage_17">Usage<a class="headerlink" href="#usage_17" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr send-data-to-dicom-node [OPTIONS] DESTINATION PORT DATA_FOLDER</code></p>
+<h4 id="arguments_17">Arguments<a class="headerlink" href="#arguments_17" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DESTINATION</code></td>
+<td>Address of the destination DICOM node</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>PORT</code></td>
+<td>Port of the destination DICOM node</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>DATA_FOLDER</code></td>
+<td>File or folder to upload.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options_17">Options<a class="headerlink" href="#options_17" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-r, --recursive</code></td>
+<td>Recursive scanning of input</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 
 
@@ -741,7 +1975,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 19, 2025 15:21:55">May 19, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 5, 2025 11:29:18">August 5, 2025</span>
   </span>
 
     
@@ -771,7 +2005,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: PACS retrieve">
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: DICOM QR">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -781,7 +2015,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                PACS retrieve
+                DICOM QR
               </div>
             </div>
           </a>
@@ -828,7 +2062,7 @@
     
     
     
-    <a href="https://git.lumc.nl/lkeb/lkeb_it-infra/pacs_retrieve" target="_blank" rel="noopener" title="Gitlab" class="md-social__link">
+    <a href="https://git.lumc.nl/lkeb/lkeb_it-infra/dicom_qr" target="_blank" rel="noopener" title="Gitlab" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m503.5 204.6-.7-1.8-69.7-181.78c-1.4-3.57-3.9-6.59-7.2-8.64-2.4-1.55-5.1-2.515-8-2.81s-5.7.083-8.4 1.11c-2.7 1.02-5.1 2.66-7.1 4.78-1.9 2.12-3.3 4.67-4.1 7.44l-47 144H160.8l-47.1-144c-.8-2.77-2.2-5.31-4.1-7.43-2-2.12-4.4-3.75-7.1-4.77a18.1 18.1 0 0 0-8.38-1.113 18.4 18.4 0 0 0-8.04 2.793 18.1 18.1 0 0 0-7.16 8.64L9.267 202.8l-.724 1.8a129.57 129.57 0 0 0-3.52 82c7.747 26.9 24.047 50.7 46.447 67.6l.27.2.59.4 105.97 79.5 52.6 39.7 32 24.2c3.7 1.9 8.3 4.3 13 4.3s9.3-2.4 13-4.3l32-24.2 52.6-39.7 106.7-79.9.3-.3c22.4-16.9 38.7-40.6 45.6-67.5 8.6-27 7.4-55.8-2.6-82"/></svg>
     </a>
   
