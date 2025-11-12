@@ -43,7 +43,7 @@
 | ![](assets/img/Chang_Li_small.jpg)            | [Chang Li](people/chang_li.md)                       | c.li1@lumc.nl            |
 | ![](assets/img/Yanli_Li_small.jpg)            | [Yanli Li](people/yanli_li.md)                       | y.li2@lumc.nl            |
 | ![](assets/img/Donghang_Lyu_small.jpg)        | [Donghang Lyu](people/donghang_lyu.md)               | d.lyu@lumc.nl            |
-| ![](assets/img/Jenia_Makarevich_small.jpg)    | Jenia Makarevich                                     | y.makarevich@lumc.nl     |
+| ![](assets/img/Jenia_Makarevich_small.jpg)    | [Jenia Makarevich](people/jenia_makarevich.md)       | y.makarevich@lumc.nl     |
 | ![](assets/img/Prerak_Mody_small.jpg)         | [Prerak Mody](people/prerak_mody.md)                 | P.P.Mody@lumc.nl         |
 | ![](assets/img/Chinmay_Rao_small.jpg)         | [Chinmay Rao](people/chinmay_rao.md)                 | c.s.rao@lumc.nl          |
 | ![](assets/img/Viktor_van_der_Valk_small.jpg) | [Viktor van der Valk](people/viktor_van_der_valk.md) | V.O.van_der_Valk@lumc.nl |
