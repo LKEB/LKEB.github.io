@@ -6,11 +6,11 @@ Jenia Makarevich is a PhD candidate in the Division of Image Processing (LKEB). 
 
 Jenia earned her MSc in Artificial Intelligence for Health from Vrije Universiteit Amsterdam in 2024 and her BSc in Econometrics from Belarusian State University.
 
-Beyond her research, Jenia serves as Treasurer on the board of the LUMC Association of PhD Candidates (https://www.laplumc.org/), where she also enjoys organising community and academic events. In her free time, she enjoys open water swimming and knitting.
+Beyond her research, Jenia serves as Treasurer on the board of the LUMC Association of PhD Candidates ([LAP LUMC](https://www.laplumc.org/)), where she also enjoys organising community and academic events. In her free time, she enjoys open water swimming and knitting.
 
 ## Research interests:
 - Explainable AI in medical imaging
 - Image generation and simulation
 
 ## Publications
-- https://orcid.org/0009-0006-0627-9454
+- [Orcid](https://orcid.org/0009-0006-0627-9454)
