@@ -49,7 +49,7 @@
 | ![](assets/img/Viktor_van_der_Valk_small.jpg) | [Viktor van der Valk](people/viktor_van_der_valk.md) | V.O.van_der_Valk@lumc.nl |
 | ![](assets/img/Alexander_Vieth_small.jpg)     | Alexander Vieth                                      | A.Vieth@lumc.nl          |
 | ![](assets/img/Xiaotong_Zhang_small.jpg)      | [Xiaotong Zhang](people/xiaotong_zhang.md)           | x.zhang@lumc.nl          |
-| ![](assets/img/Frederik_Olofsson_small.png)   | [Frederik Olofsson](people/frederik_olofsson.md)     | k.f.s.olofsson@lumc.nl   |
+| ![](assets/img/Fredrik_Olofsson_small.png)    | [Fredrik Olofsson](people/fredrik_olofsson.md)       | k.f.s.olofsson@lumc.nl   |
 | ![](assets/img/Baris_Imre_small.png)          | [Baris Imre](people/baris_imre.md)                   | b.imre@lumc.nl           |
 | ![](assets/img/Zichen_Zhang_small.png)        | [Zichen Zhang](people/zichen_zhang.md)               | z.zhang1@lumc.nl         |
 
