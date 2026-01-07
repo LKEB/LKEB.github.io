@@ -1,7 +1,8 @@
 [Home](index.md)
 
-# Publications
 
+# Publications
+- [2026](biblio/2026.md)
 - [2025](biblio/2025.md)
 - [2024](biblio/2024.md)
 - [2023](biblio/2023.md)
