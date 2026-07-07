@@ -12,7 +12,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../usage/">
+        <link rel="next" href="../examples/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -248,6 +248,25 @@
   
   
     <li class="md-tabs__item">
+      <a href="../examples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Examples
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../usage/" class="md-tabs__link">
         
   
@@ -382,6 +401,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../usage/" class="md-nav__link">
         
   
@@ -439,7 +480,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -456,14 +497,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Api
           </label>
@@ -830,6 +871,10 @@
 <td><code>send-data-to-dicom-node</code></td>
 <td>Send DICOM files in a folder to a DICOM...</td>
 </tr>
+<tr>
+<td><code>send-data-to-dicom-web</code></td>
+<td>Send DICOM files in a folder to a DICOMWeb...</td>
+</tr>
 </tbody>
 </table>
 <h2 id="sub-commands">Sub Commands<a class="headerlink" href="#sub-commands" title="Permanent link">&para;</a></h2>
@@ -1115,7 +1160,7 @@ The number of responses from the PACS is limited, if no results show try more fi
 </tr>
 <tr>
 <td><code>-e, --end [%Y-%m-%d|%Y%m%d]</code></td>
-<td>End date  [default: 2025-08-28]</td>
+<td>End date  [default: 2026-01-09]</td>
 <td>No</td>
 <td>-</td>
 </tr>
@@ -1740,6 +1785,18 @@ filtering for modalities and/or sop_class_uid.</p>
 <td>-</td>
 </tr>
 <tr>
+<td><code>--pixel-anonymize</code></td>
+<td>Perform pixel anonymization</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--rename-file</code></td>
+<td>Rename output file in case it contains PHI.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
 <td><code>-v, --verbose</code></td>
 <td>Print more output</td>
 <td>No</td>
@@ -1844,6 +1901,12 @@ filtering for modalities and/or sop_class_uid.</p>
 <td>-</td>
 </tr>
 <tr>
+<td><code>--rename-file</code></td>
+<td>Rename output file in case it contains PHI.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
 <td><code>-v, --verbose</code></td>
 <td>Print more output</td>
 <td>No</td>
@@ -1895,6 +1958,75 @@ filtering for modalities and/or sop_class_uid.</p>
 </tbody>
 </table>
 <h4 id="options_17">Options<a class="headerlink" href="#options_17" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--ae TEXT</code></td>
+<td>AE Title</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-r, --recursive</code></td>
+<td>Recursive scanning of input</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-vv</code></td>
+<td>Print even more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dicom-qr-send-data-to-dicom-web"><code>dicom-qr send-data-to-dicom-web</code><a class="headerlink" href="#dicom-qr-send-data-to-dicom-web" title="Permanent link">&para;</a></h3>
+<p>Send DICOM files in a folder to a DICOMWeb server.</p>
+<h4 id="usage_18">Usage<a class="headerlink" href="#usage_18" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr send-data-to-dicom-web [OPTIONS] URL DATA_FOLDER</code></p>
+<h4 id="arguments_18">Arguments<a class="headerlink" href="#arguments_18" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>URL</code></td>
+<td>Address of the destination DICOM node</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>DATA_FOLDER</code></td>
+<td>File or folder to upload.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options_18">Options<a class="headerlink" href="#options_18" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -1999,13 +2131,13 @@ filtering for modalities and/or sop_class_uid.</p>
         
         
           
-          <a href="../usage/" class="md-footer__link md-footer__link--next" aria-label="Next: Usage">
+          <a href="../examples/" class="md-footer__link md-footer__link--next" aria-label="Next: Examples">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Usage
+                Examples
               </div>
             </div>
             <div class="md-footer__button md-icon">
