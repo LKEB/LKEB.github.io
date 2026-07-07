@@ -804,8 +804,8 @@
 </thead>
 <tbody>
 <tr>
-<td><code>tui</code></td>
-<td>Start the TUI.</td>
+<td><code>query-tui</code></td>
+<td>Start the Query TUI.</td>
 </tr>
 <tr>
 <td><code>list-series-for-study</code></td>
@@ -868,6 +868,14 @@
 <td>Apply de-identification and use a lookup...</td>
 </tr>
 <tr>
+<td><code>generate-key-file</code></td>
+<td>Generate a pseudononymization key file...</td>
+</tr>
+<tr>
+<td><code>sort-files</code></td>
+<td>Sort all DICOM files in the input folder...</td>
+</tr>
+<tr>
 <td><code>send-data-to-dicom-node</code></td>
 <td>Send DICOM files in a folder to a DICOM...</td>
 </tr>
@@ -878,10 +886,10 @@
 </tbody>
 </table>
 <h2 id="sub-commands">Sub Commands<a class="headerlink" href="#sub-commands" title="Permanent link">&para;</a></h2>
-<h3 id="dicom-qr-tui"><code>dicom-qr tui</code><a class="headerlink" href="#dicom-qr-tui" title="Permanent link">&para;</a></h3>
-<p>Start the TUI.</p>
+<h3 id="dicom-qr-query-tui"><code>dicom-qr query-tui</code><a class="headerlink" href="#dicom-qr-query-tui" title="Permanent link">&para;</a></h3>
+<p>Start the Query TUI.</p>
 <h4 id="usage_1">Usage<a class="headerlink" href="#usage_1" title="Permanent link">&para;</a></h4>
-<p><code>dicom-qr tui [OPTIONS][SETTINGS_FILE]</code></p>
+<p><code>dicom-qr query-tui [OPTIONS][SETTINGS_FILE]</code></p>
 <h4 id="arguments_1">Arguments<a class="headerlink" href="#arguments_1" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -1113,6 +1121,12 @@
 </thead>
 <tbody>
 <tr>
+<td><code>-c, --constraint [as_is|pad_trunc_16_leading_zero]</code></td>
+<td>Apply constraints to accession number  [default: as_is]</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
 <td><code>-v, --verbose</code></td>
 <td>Print more output</td>
 <td>No</td>
@@ -1160,7 +1174,7 @@ The number of responses from the PACS is limited, if no results show try more fi
 </tr>
 <tr>
 <td><code>-e, --end [%Y-%m-%d|%Y%m%d]</code></td>
-<td>End date  [default: 2026-01-09]</td>
+<td>End date  [default: 2026-07-07]</td>
 <td>No</td>
 <td>-</td>
 </tr>
@@ -1206,7 +1220,7 @@ The number of responses from the PACS is limited, if no results show try more fi
 <p>Load a CSV file, read the column 'AccessionNumber' and write all studies to output.
 Does not download images.</p>
 <h4 id="usage_7">Usage<a class="headerlink" href="#usage_7" title="Permanent link">&para;</a></h4>
-<p><code>dicom-qr studyuid-from-acc-number-file [OPTIONS] FILENAME [OUTPUT]</code></p>
+<p><code>dicom-qr studyuid-from-acc-number-file [OPTIONS] FILENAME OUTPUT</code></p>
 <h4 id="arguments_7">Arguments<a class="headerlink" href="#arguments_7" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -1219,6 +1233,11 @@ Does not download images.</p>
 <tbody>
 <tr>
 <td><code>FILENAME</code></td>
+<td>[required]</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>OUTPUT</code></td>
 <td>[required]</td>
 <td>No</td>
 </tr>
@@ -1235,6 +1254,12 @@ Does not download images.</p>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><code>-c, --constraint [as_is|pad_trunc_16_leading_zero]</code></td>
+<td>Apply constraints to accession number  [default: as_is]</td>
+<td>No</td>
+<td>-</td>
+</tr>
 <tr>
 <td><code>-vv</code></td>
 <td>Print even more output</td>
@@ -1342,6 +1367,12 @@ Does not download images.</p>
 <td>-</td>
 </tr>
 <tr>
+<td><code>--no-store-scp</code></td>
+<td>No local C_STORE SCP server.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
 <td><code>-v, --verbose</code></td>
 <td>Print more output</td>
 <td>No</td>
@@ -1417,6 +1448,12 @@ Does not download images.</p>
 <td>-</td>
 </tr>
 <tr>
+<td><code>--no-store-scp</code></td>
+<td>No local C_STORE SCP server.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
 <td><code>-v, --verbose</code></td>
 <td>Print more output</td>
 <td>No</td>
@@ -1469,6 +1506,12 @@ Does not download images.</p>
 </thead>
 <tbody>
 <tr>
+<td><code>-c, --constraint [as_is|pad_trunc_16_leading_zero]</code></td>
+<td>Apply constraints to accession number  [default: as_is]</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
 <td><code>-m, --modality TEXT</code></td>
 <td>Filter series based on modalities</td>
 <td>No</td>
@@ -1483,6 +1526,12 @@ Does not download images.</p>
 <tr>
 <td><code>--dumpdir DIRECTORY</code></td>
 <td>Override output folder.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--no-store-scp</code></td>
+<td>No local C_STORE SCP server.</td>
 <td>No</td>
 <td>-</td>
 </tr>
@@ -1557,7 +1606,7 @@ Does not download images.</p>
 <td>-</td>
 </tr>
 <tr>
-<td><code>--no_store_scp</code></td>
+<td><code>--no-store-scp</code></td>
 <td>No local C_STORE SCP server.</td>
 <td>No</td>
 <td>-</td>
@@ -1636,6 +1685,12 @@ filtering for modalities and/or sop_class_uid.</p>
 <tr>
 <td><code>--dumpdir DIRECTORY</code></td>
 <td>Override output folder.  [default: dumpdir]</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--no-store-scp</code></td>
+<td>No local C_STORE SCP server.</td>
 <td>No</td>
 <td>-</td>
 </tr>
@@ -1859,6 +1914,18 @@ filtering for modalities and/or sop_class_uid.</p>
 </thead>
 <tbody>
 <tr>
+<td><code>--patient-id-column INTEGER</code></td>
+<td>Column number containing the original patient ID  [default: 0]</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--pseudo-patient-id-column INTEGER</code></td>
+<td>Column number containing the new patient ID  [default: 1]</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
 <td><code>-r, --recipe PATH</code></td>
 <td>Recipe to de-identify</td>
 <td>No</td>
@@ -1926,11 +1993,127 @@ filtering for modalities and/or sop_class_uid.</p>
 </tr>
 </tbody>
 </table>
+<h3 id="dicom-qr-generate-key-file"><code>dicom-qr generate-key-file</code><a class="headerlink" href="#dicom-qr-generate-key-file" title="Permanent link">&para;</a></h3>
+<p>Generate a pseudononymization key file from a CSV file containing patient IDs.
+The patient IDs will be randomly shuffled before assigning the pseuodo IDs.</p>
+<h4 id="usage_17">Usage<a class="headerlink" href="#usage_17" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr generate-key-file [OPTIONS] FILENAME OUTPUT</code></p>
+<h4 id="arguments_17">Arguments<a class="headerlink" href="#arguments_17" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FILENAME</code></td>
+<td>[required]</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>OUTPUT</code></td>
+<td>[required]</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options_17">Options<a class="headerlink" href="#options_17" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--original-column TEXT</code></td>
+<td>Original column name  [default: PatientID]</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--number-of-digits INTEGER</code></td>
+<td>Number of digits in the pseudo IDs.  [default: 3]</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dicom-qr-sort-files"><code>dicom-qr sort-files</code><a class="headerlink" href="#dicom-qr-sort-files" title="Permanent link">&para;</a></h3>
+<p>Sort all DICOM files in the input folder into a folder structure defined by the template.
+When using PowerShell, use ` to escape the $ signs. On linux use single quotes around template.</p>
+<h4 id="usage_18">Usage<a class="headerlink" href="#usage_18" title="Permanent link">&para;</a></h4>
+<p><code>dicom-qr sort-files [OPTIONS] INPUT_DIR OUTPUT_DIR</code></p>
+<h4 id="arguments_18">Arguments<a class="headerlink" href="#arguments_18" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>INPUT_DIR</code></td>
+<td>input folder.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>OUTPUT_DIR</code></td>
+<td>output folder.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options_18">Options<a class="headerlink" href="#options_18" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-t, --template TEXT</code></td>
+<td>Template to use  [default: ${PatientID}/${StudyDate}/${StudyDescription}/${Modality}/${SeriesDescription}]</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>-v, --verbose</code></td>
+<td>Print more output</td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>--help</code></td>
+<td>Show this message and exit.</td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
 <h3 id="dicom-qr-send-data-to-dicom-node"><code>dicom-qr send-data-to-dicom-node</code><a class="headerlink" href="#dicom-qr-send-data-to-dicom-node" title="Permanent link">&para;</a></h3>
 <p>Send DICOM files in a folder to a DICOM Store SCP node.</p>
-<h4 id="usage_17">Usage<a class="headerlink" href="#usage_17" title="Permanent link">&para;</a></h4>
+<h4 id="usage_19">Usage<a class="headerlink" href="#usage_19" title="Permanent link">&para;</a></h4>
 <p><code>dicom-qr send-data-to-dicom-node [OPTIONS] DESTINATION PORT DATA_FOLDER</code></p>
-<h4 id="arguments_17">Arguments<a class="headerlink" href="#arguments_17" title="Permanent link">&para;</a></h4>
+<h4 id="arguments_19">Arguments<a class="headerlink" href="#arguments_19" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -1957,7 +2140,7 @@ filtering for modalities and/or sop_class_uid.</p>
 </tr>
 </tbody>
 </table>
-<h4 id="options_17">Options<a class="headerlink" href="#options_17" title="Permanent link">&para;</a></h4>
+<h4 id="options_19">Options<a class="headerlink" href="#options_19" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -2002,9 +2185,9 @@ filtering for modalities and/or sop_class_uid.</p>
 </table>
 <h3 id="dicom-qr-send-data-to-dicom-web"><code>dicom-qr send-data-to-dicom-web</code><a class="headerlink" href="#dicom-qr-send-data-to-dicom-web" title="Permanent link">&para;</a></h3>
 <p>Send DICOM files in a folder to a DICOMWeb server.</p>
-<h4 id="usage_18">Usage<a class="headerlink" href="#usage_18" title="Permanent link">&para;</a></h4>
+<h4 id="usage_20">Usage<a class="headerlink" href="#usage_20" title="Permanent link">&para;</a></h4>
 <p><code>dicom-qr send-data-to-dicom-web [OPTIONS] URL DATA_FOLDER</code></p>
-<h4 id="arguments_18">Arguments<a class="headerlink" href="#arguments_18" title="Permanent link">&para;</a></h4>
+<h4 id="arguments_20">Arguments<a class="headerlink" href="#arguments_20" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -2026,7 +2209,7 @@ filtering for modalities and/or sop_class_uid.</p>
 </tr>
 </tbody>
 </table>
-<h4 id="options_18">Options<a class="headerlink" href="#options_18" title="Permanent link">&para;</a></h4>
+<h4 id="options_20">Options<a class="headerlink" href="#options_20" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -2071,27 +2254,6 @@ filtering for modalities and/or sop_class_uid.</p>
 
 
 
-  
-    
-  
-  
-
-
-  <aside class="md-source-file">
-    
-      
-  <span class="md-source-file__fact">
-    <span class="md-icon" title="Last update">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
-    </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 5, 2025 11:29:18 UTC">August 5, 2025</span>
-  </span>
-
-    
-    
-    
-    
-  </aside>
 
 
 
