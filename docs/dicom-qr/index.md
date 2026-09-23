@@ -1,3 +1,0 @@
-# DICOM QR
-
-Welcome
